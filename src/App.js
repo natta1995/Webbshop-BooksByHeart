@@ -1,19 +1,18 @@
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import HomePage from "./pages/home";
+import ProductPage from "./pages/products";
 
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <div style={{backgroundColor: "green " }}>
-          <h1>Welcome!</h1>
-        </div>
-        </header>
-        <div style={{backgroundColor: "red",}}>
-          <p>This is my webbsite</p>
-        </div>
-        <p>Adding this</p>
-     
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage/>} />
+        <Route path="/products" element={<ProductPage/>} />
+      </Routes>
+    </Router>
+
   );
 }
 
