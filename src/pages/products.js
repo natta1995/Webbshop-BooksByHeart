@@ -1,9 +1,10 @@
+import React from "react"
 
 const ProductPage = () => {
     return (
-        <>
-        <h1>ProductPage</h1>
-        </>
+        <div style={{ marginTop: "100px"}}>
+        <h1>Produktsida</h1>
+        </div>
     )
 }
 
