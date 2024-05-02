@@ -5,6 +5,7 @@ import ProductPage from "./pages/products";
 import Navbar from "./navbar"
 import ContactPage from "./pages/contacts";
 import Footer from "./footer"
+import ProductDetailPage from "./pages/productDetail";
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage/>} />
         <Route path="/products" element={<ProductPage/>} />
+        <Route path="/product/:id" element={<ProductDetailPage />} />
         <Route path="/contact" element={<ContactPage/>} />
       </Routes>
       <Footer />
