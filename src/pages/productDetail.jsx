@@ -6,16 +6,22 @@ const ProductDetailPage = () => {
   const product = getProductById(id);
 
   return (
-    <div style={{ marginTop: "100px" }}>
-      <h1>Produktinformation</h1>
-      <p>Detaljer för produkt med ID {id}</p>
+    <div style={{ marginTop: "20px", marginLeft: "20px", display: "flex" }}>
       {product && (
-        <div>
-          <p>Namn: {product.name}</p>
-          <p>Kostnad: {product.cost}</p>
-          <img src={product.image} alt={product.name} />
+        <div style={{ flex: 1 }}>
+          <img src={product.image} alt={product.name} style={{ maxWidth: "100%" }} />
         </div>
       )}
+      <div style={{ flex: 1 }}>
+        <h1>Produktinformation</h1>
+        <p>Detaljer för produkt med ID {id}</p>
+        {product && (
+          <div>
+            <p>Namn: {product.name}</p>
+            <p>Kostnad: {product.cost}</p>
+          </div>
+        )}
+      </div>
     </div>
   );
 };

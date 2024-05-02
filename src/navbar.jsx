@@ -36,6 +36,9 @@ function Navbar() {
               <li className="nav-item">
                 <Link className="nav-link" to="/contact">Kontakt</Link>
               </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/bookclub">Bokklubb</Link>
+              </li>
             </ul>
             <div style={{ marginTop: "1px", textAlign: "center" }}>
       <Form style={{ marginTop: "20px" }} onSubmit={handleSearch}>

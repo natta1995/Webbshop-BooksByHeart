@@ -6,6 +6,7 @@ import Navbar from "./navbar"
 import ContactPage from "./pages/contacts";
 import Footer from "./footer"
 import ProductDetailPage from "./pages/productDetail";
+import BookClub from "./pages/bookclub";
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route path="/products" element={<ProductPage/>} />
         <Route path="/product/:id" element={<ProductDetailPage />} />
         <Route path="/contact" element={<ContactPage/>} />
+        <Route path="/bookclub" element={<BookClub/>} />
       </Routes>
       <Footer />
     </Router>
