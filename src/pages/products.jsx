@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "react-router-dom";
 import products from "../database"
+import {Button} from "react-bootstrap"
 
 const ProductPage = () => {
     
@@ -15,6 +16,7 @@ const ProductPage = () => {
             </div>
             <p>{product.name}</p>
             <p>{product.cost}</p>
+            <Button style={{backgroundColor: "red", borderColor: "red", justifyContent: "right"}}>Köp</Button>
           </Link>
     
         ))}

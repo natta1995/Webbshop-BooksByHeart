@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import { getProductById } from "../database";
+import { Button } from "react-bootstrap"
 
 const ProductDetailPage = () => {
   const { id } = useParams();
@@ -19,6 +20,7 @@ const ProductDetailPage = () => {
           <div>
             <p>Namn: {product.name}</p>
             <p>Kostnad: {product.cost}</p>
+            <Button style={{backgroundColor: "red", borderColor: "red"}}> Köp </Button>
           </div>
         )}
       </div>
