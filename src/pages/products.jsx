@@ -5,7 +5,6 @@ import {Button} from "react-bootstrap"
 
 const ProductPage = () => {
     
-  
     return (
       <div style={{ marginTop: "100px", display: "flex", flexWrap: "wrap", justifyContent: "center"}}>
         {products.map((product) => (
