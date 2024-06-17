@@ -16,7 +16,7 @@ const products = [
       sort: "Plastat häfte",
       des: "I den första boken om Nalle, får Nalle se snö för första gången. Tillsammans med sina vänner provar han allt man kan göra i snön. Bygga snögubbe, åka pulka och göra snölykta. " },
     { id: 2,
-      name: "Postmannen och brevduvans galna race emot klockan", 
+      name: "Postmannen och brevduvan", 
       image: img2, 
       cost: "129:-",
       by: "Sam Williams",
