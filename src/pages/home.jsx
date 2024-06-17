@@ -36,7 +36,7 @@ const HomePage = () => {
 <div style={{display: "flex", alignItems: "center", paddingTop: "10%"}}>
   <img src={intervjugirl} alt="intervjugirl" style={{width: "50%"}}/>
   <div style={{paddingLeft: "20px"}}>
-    <h2> En av våra prenumeranter berättar</h2>
+    <h2> En av våra prenumeranter berättar...</h2>
     <p> Petra är en av våra yngsta prenumeranter. Efter att ha varit enda barnet i sexton år fick hennes mamma och hennes nya man ett tillskott. Petra berättar hur hon tyckte det var roligt men var samtidigt lite ledsen över att få ett syskon så sent i hennes eget liv. "Jag var rädd att vi inte skulle kunna få någon bra relation. Både på grund av den stora åldersskillnaden men också för att jag bara bor där varannan vecka. Dessutom så ser jag att jag inom några år kommer flytta hemifrån. Därför kände jag att jag ville ha något som var vår grej.", förklarar hon. Därav började hon redan när Adam var ett år att premunera på BooksByHeart. Förra året tog Petra studenten och har sedan förra året lämnat Stockholm och bosatt sig i Borås där hon studerar till läkare. Men så ofta hon kan åker hon och hälsar på sin lillebror. "Nu till sommaren har jag sökt ett jobb i hemtrakten och kommer kunna träffa honom mycket mer. Men det är så kul för det har verkligen blivit vår grej. Nu sist när han och mamma mötte upp mig vid tåget hade han redan en bok i handen. Jag var tvungen att läsa den för honom i bilen.", säger hon och skrattar. </p>
   </div>
 </div>
