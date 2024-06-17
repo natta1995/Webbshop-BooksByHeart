@@ -1,12 +1,9 @@
-import BookImg from "../src/img/book.webp"
 import img1 from "../src/img/snow.jpg"
 import img2 from "../src/img/postman.webp"
 import img3 from "../src/img/godlonly.jpg"
 import img4 from "../src/img/pumkin.jpg"
 import img5 from "../src/img/girlanddog.jpg"
 import img6 from "../src/img/rabbit.jpg"
-
-
 
 
 const products = [
@@ -16,8 +13,6 @@ const products = [
     { id: 4, name: "I sagornas värd - pumpflickan", image: img4, cost: "59:-",  des: "I sagornas värld besöker vi denna gången pumpflickan på hennes äventyr. Pumpflickan bor ensam i skogen i sin lilla pumpa."},
     { id: 5, name: "Flickan, hunden och natten", image: img5, cost: "99:-", des: "När man inte kan sova och natten redan är här. Hur många stjärnor kan du se?" },
     { id: 6, name: "Familj Kanin åker pulka", image: img6, cost: "349:-" , des: "Mamma kanin, pappa kanin, storasyster kanin och lillebror kanin. Alla vill leka i snön men lillabror kanin vill inte gå in när det börjat bli kallt och mörkt."},
-    
-    
   ];
 
   export const getProductById = (id) => {
