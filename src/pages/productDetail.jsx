@@ -5,6 +5,7 @@ import { Button } from "react-bootstrap"
 const ProductDetailPage = () => {
   const { id } = useParams();
   const product = getProductById(id);
+  
 
   return (
     <div style={{ marginTop: "20px", marginLeft: "20px", display: "flex" }}>
