@@ -41,8 +41,8 @@ function Navbar() {
               </li>
             </ul>
             <div style={{ marginTop: "1px", textAlign: "center" }}>
-      <Form style={{ marginTop: "20px" }} onSubmit={handleSearch}>
-        <InputGroup className="mb-3">
+      <Form style={{ marginTop: "20px" , marginLeft: "600px" }} onSubmit={handleSearch}>
+        <InputGroup className="mb-3" style={{width: "400px"}}>
           <FormControl
             placeholder="Sök efter en bok..."
             value={searchTerm}
