@@ -16,10 +16,11 @@ const BookClub = () => {
                 <img src={img1} alt="babyreading" style={{ width: "40%", marginLeft: "20px" }}/>
 
                 <div style={{ flex: 1, marginLeft: "5%",  }}>
-                    <h4>Nykelpigorna</h4>
-                    <h5>Babygruppens bokklubb</h5>
+                    <h4>Nykelpigorna - Babygruppen</h4>
                     <p>Rekommenderad ålder: 0-3 ålder</p>
+                    <p>Pris: 399:-</p>
                     <h6>Beskrivning: </h6>
+                    <p>Varje onsdag kommer en ny bok i posten. Du kan när som helst välja att avsluta ditt medlemskap hos oss.</p>
                     <Link> Anmäl intresse </Link>
                 </div>
             </div>
@@ -28,10 +29,11 @@ const BookClub = () => {
          
                 <img src={img2} alt="babyreading" style={{ width: "40%", marginLeft: "20px" }}/>
                 <div style={{ flex: 1, marginLeft: "5%" }}>
-                    <h4>Björnarna</h4>
-                    <h5>De nybörjade läsarnas bokklubb</h5>
+                    <h4>Björnarna - Nybörjarna</h4>
                     <p>Rekommenderad ålder: 4-8 ålder</p>
+                    <p>Pris: 499:-</p>
                     <h6>Beskrivning: </h6>
+                    <p>Varje onsdag kommer en ny bok i posten. Du kan när som helst välja att avsluta ditt medlemskap hos oss.</p>
                     <Link> Anmäl intresse </Link>
                 </div>
             </div>
@@ -40,10 +42,11 @@ const BookClub = () => {
              
                 <img src={img3} alt="babyreading" style={{ width: "40%", marginLeft: "20px" }}/>
                 <div style={{ flex: 1, marginLeft: "5%"  }}>
-                    <h4>Fåglarna</h4>
-                    <h5>Flerbarns gruppens bokklubb</h5>
+                    <h4>Fåglarna - Flerbarnsgänget</h4>
                     <p>Rekommenderad ålder: Valfri</p>
+                    <p>Pris: 599:-</p>
                     <h6>Beskrivning: </h6>
+                    <p>Varje onsdag kommer en ny bok i posten. Du kan när som helst välja att avsluta ditt medlemskap hos oss.</p>
                     <Link> Anmäl intresse </Link>
                 </div>
             </div>

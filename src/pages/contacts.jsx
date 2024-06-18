@@ -13,10 +13,9 @@ const ContactPage = () => {
             <label htmlFor="email">E-post: </label>
             <input type="email" id="email" name="email" style={{marginLeft: "2%",marginBottom:"1%" }}/>
           </div>
-          <label htmlFor="message">Meddelande:</label>
+      
           <div>
-            
-            <textarea id="message" name="message" rows="8" style={{marginLeft: "2%", width: "30%"}}/>
+            <textarea id="message" placeholder="Skriv ditt meddelande här..." name="message" rows="8" style={{marginLeft: "2%", width: "30%"}}/>
           </div>
           <button type="submit" style={{marginTop:"2%"}}>Skicka</button>
         </form>
