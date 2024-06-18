@@ -10,9 +10,14 @@ const ProductDetailPage = () => {
   return (
     <div style={{ marginTop: "20px", marginLeft: "20px", display: "flex" }}>
       {product && (
-        <div style={{ flex: 1 }}>
-          <img src={product.image} alt={product.name} style={{ width: "400px", height: "500px", border: "3px solid black" }} />
+        
+        <div style={{ flex: 1, position: "relative" }}>
+        <img src={product.image} alt={product.name} style={{ width: "400px", height: "500px", border: "3px solid black" }} />
+        <div style={{ position: "absolute", bottom: "0", left: "0", width: "100%", backgroundColor: "rgba(0, 0, 0, 0.0)", color: "white" , padding: "5%" }}>
+          <h4 style={{ margin: "0", color: "black" }}>{product.name}</h4>
+          <h6 style={{ margin: "0", color: "black" }}>{product.by}</h6>
         </div>
+      </div>
       )}
       <div style={{ flex: 1, marginLeft: "-35%"}}>
         <h1>{product.name}</h1>

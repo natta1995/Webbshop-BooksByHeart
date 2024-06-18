@@ -60,22 +60,5 @@ function Navbar() {
     );
   }
 
-// const Navbar = () => {
-//     return (
-//         <AppBar >
-//             <Toolbar>
-//                 <Button sx={{backgroundColor: "white", color: "black"}} component={Link} to="/">
-//                     Hem
-//                 </Button>
-//                 <Button sx={{backgroundColor: "white", color: "black"}} component={Link} to="/products">
-//                     Produkter
-//                 </Button>
-//                 <Button sx={{backgroundColor: "white", color: "black"}} component={Link} to="/contact">
-//                     Kontakt
-//                 </Button>
-//             </Toolbar>
-//         </AppBar>
-//     );
-//}
 
 export default Navbar
