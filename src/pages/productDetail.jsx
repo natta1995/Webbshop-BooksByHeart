@@ -11,15 +11,18 @@ const ProductDetailPage = () => {
     <div style={{ marginTop: "20px", marginLeft: "20px", display: "flex" }}>
       {product && (
         <div style={{ flex: 1 }}>
-          <img src={product.image} alt={product.name} style={{ maxWidth: "100%" }} />
+          <img src={product.image} alt={product.name} style={{ width: "400px", height: "500px", border: "3px solid black" }} />
         </div>
       )}
-      <div style={{ flex: 1 }}>
+      <div style={{ flex: 1, marginLeft: "-35%"}}>
         <h1>{product.name}</h1>
-        <p>{product.des}</p>
+        <h2>{product.by}</h2>
+        <h6>{product.age}</h6>
+        <h6>{product.sort}</h6>
+        <h6>{product.des}</h6>
         {product && (
           <div>
-            <p>Pris: {product.cost}</p>
+            <h3>Pris: {product.cost}</h3>
             <Button style={{backgroundColor: "red", borderColor: "red"}}> Köp </Button>
           </div>
         )}
