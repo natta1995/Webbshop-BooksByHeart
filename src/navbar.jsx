@@ -1,7 +1,6 @@
-
 import {Link} from "react-router-dom"
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Form, Button, FormControl, InputGroup } from "react-bootstrap";
+import { Form, Button, FormControl, InputGroup,  Navbar as BootstrapNavbar, Nav, Container, NavDropdown } from "react-bootstrap";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom"
 
@@ -19,45 +18,34 @@ function Navbar() {
     };
 
     return (
-      <nav className="navbar navbar-expand-lg navbar-light bg-light" sx={{marginBottom: "0px"}}>
-        <div className="container-fluid">
-          <Link className="navbar-brand" to="/">BooksByHeart</Link>
-          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav">
-              <li className="nav-item">
-                <Link className="nav-link" to="/">Hem</Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/products">Böcker</Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/contact">Kontakt</Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/bookclub">Bokklubb</Link>
-              </li>
-            </ul>
-            <div style={{ marginTop: "1px", textAlign: "center" }}>
-      <Form style={{ marginTop: "20px" , marginLeft: "600px" }} onSubmit={handleSearch}>
-        <InputGroup className="mb-3" style={{width: "400px"}}>
-          <FormControl
-            placeholder="Sök efter en bok..."
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-          />
-          <Button variant="primary" type="submit">
-            Sök
-          </Button>
-        </InputGroup>
-      </Form>
-      </div>
-          </div>
-        </div>
-      </nav>
-    );
+    
+        <BootstrapNavbar bg="light" expand="lg">
+          <Container>
+            <BootstrapNavbar.Brand as={Link} to="/">BooksByHeart</BootstrapNavbar.Brand>
+            <BootstrapNavbar.Toggle aria-controls="basic-navbar-nav" />
+            <BootstrapNavbar.Collapse id="basic-navbar-nav">
+              <Nav className="me-auto">
+                <Nav.Link as={Link} to="/">Hem</Nav.Link>
+                <Nav.Link as={Link} to="/products">Böcker</Nav.Link>
+                <Nav.Link as={Link} to="/contact">Kontakt</Nav.Link>
+                <Nav.Link as={Link} to="/bookclub">Bokklubb</Nav.Link>
+              </Nav>
+              <Form className="d-flex" onSubmit={handleSearch}>
+                <InputGroup>
+                  <FormControl
+                    placeholder="Sök efter en bok..."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                  />
+                  <Button variant="primary" type="submit">
+                    Sök
+                  </Button>
+                </InputGroup>
+              </Form>
+            </BootstrapNavbar.Collapse>
+          </Container>
+        </BootstrapNavbar>
+      );
   }
 
 
