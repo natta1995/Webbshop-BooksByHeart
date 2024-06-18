@@ -31,7 +31,7 @@ function Navbar() {
                 <Link className="nav-link" to="/">Hem</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/products">Produkter</Link>
+                <Link className="nav-link" to="/products">Böcker</Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/contact">Kontakt</Link>
