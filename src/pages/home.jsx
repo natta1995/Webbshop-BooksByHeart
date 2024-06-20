@@ -76,7 +76,7 @@ const HomePage = () => {
         </div>
         <div style={headerTextStyle}>
           <h1>Välkommen till BooksByHeart</h1>
-          <p style={pStyle}>Du vet väl att vi har bokklubbar som du kan gå med i? För barn mellan 0 - 12 år! <Link to="/bookclub">Läs mer här</Link></p>
+          <p style={pStyle}>Du vet väl att vi har bokklubbar som du kan gå med i? För barn mellan 0 - 12 år! <Link to="/bookclub">Läs mer.</Link></p>
         </div>
       </div>
 
