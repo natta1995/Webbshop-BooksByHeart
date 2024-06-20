@@ -1,10 +1,18 @@
+import {useState} from "react"
+
 const ContactPage = () => {
+  const [isClicked, setIsClicked] = useState(false)
+
+  const handelClick = (event) => {
+    event.preventDefault();
+    setIsClicked(true)
+  }
     return (
       <div style={{ marginTop: "100px", textAlign: "center" }}>
         <h1 style={{marginBottom: "1%"}}>Vill du kontakta oss?</h1>
         <p>Har du frågor eller vill du hjälpa oss att bli bättre? <br></br> Att skicka ett meddelande är det bästa sättet att få kontakt med oss. <br></br> Vi kommer höra av oss till dig inom 48h.</p>
         
-        <form>
+        <form onSubmit={handelClick}>
           <div>
             <input type="text" id="name" name="name" placeholder=" Namn " style={{marginLeft: "2%", marginBottom:"1%",width: "30%" }}/>
           </div>
@@ -17,6 +25,9 @@ const ContactPage = () => {
           </div>
           <button type="submit" style={{marginTop:"2%", padding: "0.5%", width: "7%"}}>Skicka</button>
         </form>
+        {isClicked && (
+          <p style={{color: "red", paddingTop: "2%"}}>Tack för ditt meddelande! <br></br> Vi hör av oss så fort vi kan!</p>
+        )}
       </div>
     );
   }
