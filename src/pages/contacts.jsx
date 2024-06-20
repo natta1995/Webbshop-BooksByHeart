@@ -1,8 +1,8 @@
 const ContactPage = () => {
     return (
       <div style={{ marginTop: "100px", textAlign: "center" }}>
-        <h1>Kontaktsida</h1>
-        <p>Har du frågor eller kommentarer? Kontakta oss gärna genom formuläret nedan eller använd kontaktinformationen nedan.</p>
+        <h1 style={{marginBottom: "1%"}}>Skicka meddelande</h1>
+        <p>Har du frågor eller kommentarer? <br></br> Kontakta oss gärna genom formuläret nedan eller använd kontaktinformationen nedan.</p>
         
         <form>
           <div>
