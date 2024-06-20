@@ -23,11 +23,12 @@ const ContactPage = () => {
           <div>
             <textarea id="message" placeholder="Skriv ditt meddelande här..." name="message" rows="8" style={{marginLeft: "2%", width: "30%"}}/>
           </div>
+          {isClicked && (
+          <p style={{color: "red", padding: "2%", border: "solid 2px black", width: "30%"}}>Tack för ditt meddelande! <br></br> Vi hör av oss så fort vi kan!</p>
+        )}
           <button type="submit" style={{marginTop:"2%", padding: "0.5%", width: "7%"}}>Skicka</button>
         </form>
-        {isClicked && (
-          <p style={{color: "red", paddingTop: "2%"}}>Tack för ditt meddelande! <br></br> Vi hör av oss så fort vi kan!</p>
-        )}
+     
       </div>
     );
   }
