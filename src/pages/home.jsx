@@ -33,7 +33,7 @@ const HomePage = () => {
 
   const headerTextStyle = {
     position: 'absolute',
-    top: isMobile ? '30%' : '20%',
+    top: isMobile ? '40%' : '40%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
     zIndex: 1,
@@ -62,6 +62,9 @@ const HomePage = () => {
     marginBottom: isMobile ? '20px' : '0'
   };
 
+  const pStyle = isMobile ? {fontSize: "100%"} : {};
+
+
   return (
     <div>
       <div style={containerStyle}>
@@ -73,7 +76,7 @@ const HomePage = () => {
         </div>
         <div style={headerTextStyle}>
           <h1>Välkommen till BooksByHeart</h1>
-          <p>Du vet väl att vi har bokklubbar som du kan gå med i? För barn mellan 0 - 12 år! <Link to="/bookclub">Läs mer här</Link></p>
+          <p style={pStyle}>Du vet väl att vi har bokklubbar som du kan gå med i? För barn mellan 0 - 12 år! <Link to="/bookclub">Läs mer här</Link></p>
         </div>
       </div>
 
