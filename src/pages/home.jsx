@@ -39,7 +39,7 @@ const HomePage = () => {
     zIndex: 1,
     color: 'white',
     textAlign: 'center',
-    fontSize: isMobile ? '14px' : 'initial'
+    fontSize: isMobile ? '14px' : '100%'
   };
 
   const sectionStyle = {
@@ -62,7 +62,7 @@ const HomePage = () => {
     marginBottom: isMobile ? '20px' : '0'
   };
 
-  const pStyle = isMobile ? {fontSize: "100%"} : {};
+  const pStyle = isMobile ? {fontSize: "100%"} : {fontSize: "110%"};
 
 
   return (
