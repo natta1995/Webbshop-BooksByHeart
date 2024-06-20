@@ -21,14 +21,16 @@ const ProductDetailPage = () => {
       )}
       <div style={{ flex: 1, marginLeft: "-35%"}}>
         <h1>{product.name}</h1>
-        <h2>{product.by}</h2>
-        <h6>{product.age}</h6>
-        <h6>{product.sort}</h6>
+        <h2 style={{paddingBottom: "2%"}}>Av: {product.by}</h2>
+        <h6>Ålder: {product.age}</h6>
+        <h6>Produkt: Bok</h6>
+        <h6>Typ: {product.sort}</h6>
+        <h6 style={{paddingTop: "2%"}}>Beskrivning:</h6>
         <h6>{product.des}</h6>
         {product && (
           <div>
             <h3>Pris: {product.cost}</h3>
-            <Button style={{backgroundColor: "red", borderColor: "red"}}> Köp </Button>
+            <Button style={{backgroundColor: "red", borderColor: "red", marginTop: "2%"}}> Köp </Button>
           </div>
         )}
       </div>
