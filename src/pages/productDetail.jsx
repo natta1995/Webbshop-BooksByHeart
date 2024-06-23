@@ -4,7 +4,7 @@ import { Button } from "react-bootstrap";
 import styled from "styled-components";
 
 const Container = styled.div`
-  margin-top: 20px;
+  margin-top: 80px;
   margin-left: 20px;
   display: flex;
   flex-direction: row;
