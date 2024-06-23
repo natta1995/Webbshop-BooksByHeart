@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import products from "../database"
 import {Button} from "react-bootstrap"
 
-const ProductPage = () => {
+const ProductPage = () => { 
     
     return (
       <div style={{ marginTop: "100px", display: "flex", flexWrap: "wrap", justifyContent: "center"}}>
@@ -18,7 +18,7 @@ const ProductPage = () => {
           </div>
             <h4>{product.name}</h4>
             <h6>{product.by}</h6>
-            <h6>{product.sort}</h6>
+            <h6>{product.sort}</h6> 
             <h5>{product.cost}</h5>
             <Button style={{backgroundColor: "red", borderColor: "red", justifyContent: "center", width: "90%"}}>Köp</Button>
           </Link>
