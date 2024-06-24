@@ -48,7 +48,7 @@ const products = [
       sort: "Inbunden",
       des: "När man inte kan sova och natten redan är här. Hur många stjärnor kan du se?" },
     { id: 6, 
-      name: "Familj Kanin åker pulka", 
+      name: "Familjen Kanin åker pulka", 
       image: img6, 
       cost: "349:-" , 
       age: "1-3 år",
