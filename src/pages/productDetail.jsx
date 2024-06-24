@@ -52,7 +52,8 @@ const ImageContainer = styled.div`
 const ProductInfo = styled.div`
   flex: 1;
   margin-left: -35%;
-
+  margin-right: 5%;
+  
   @media (max-width: 768px) {
     margin-left: 0;
     padding: 20px;
