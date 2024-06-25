@@ -6,6 +6,7 @@ import img5 from "../src/img/girlanddog.jpg"
 import img6 from "../src/img/rabbit.jpg"
 
 
+
 const products = [
     { id: 1, 
       name: "Nalles första snö", 
