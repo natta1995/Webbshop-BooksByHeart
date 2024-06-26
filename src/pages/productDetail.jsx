@@ -68,6 +68,7 @@ const ProductInfo = styled.div`
   }
 `;
 
+
 const ProductDetailPage = () => {
   const { id } = useParams();
   const product = getProductById(id);
