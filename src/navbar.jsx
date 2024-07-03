@@ -3,12 +3,23 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Form, Button, FormControl, InputGroup,  Navbar as BootstrapNavbar, Nav, Container, Dropdown } from "react-bootstrap";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom"
+import styled from "styled-components";
 import booksData from "./database"
 
 function Navbar() {
     const [searchTerm, setSearchTerm] = useState(""); 
     const [filteredBooks, setFilteredBooks] = useState([]);
     const navigate = useNavigate();
+
+    const DropdownMenu = styled(Dropdown.Menu)`
+    position: absolute;
+    width: 100%;
+    max-height: 300px;
+    overflow-y: auto;
+    z-index: 1000;
+  `;
+
+
   
     const handleSearch = (e) => {
       e.preventDefault();
@@ -65,7 +76,7 @@ function Navbar() {
                   </Button>
                 </InputGroup>
                 {filteredBooks.length > 0 && (
-                  <Dropdown.Menu show>
+                  <DropdownMenu show>
                     {filteredBooks.map((book) => (
                       <Dropdown.Item
                         as={Link}
@@ -77,7 +88,7 @@ function Navbar() {
                         {book.name}
                       </Dropdown.Item>
                     ))}
-                  </Dropdown.Menu>
+                  </DropdownMenu>
                 )}
               </Form>
             </BootstrapNavbar.Collapse>
