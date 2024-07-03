@@ -6,6 +6,8 @@ import { useNavigate } from "react-router-dom"
 import styled from "styled-components";
 import booksData from "./database"
 
+
+
 function Navbar() {
     const [searchTerm, setSearchTerm] = useState(""); 
     const [filteredBooks, setFilteredBooks] = useState([]);
@@ -13,13 +15,13 @@ function Navbar() {
 
     const DropdownMenu = styled(Dropdown.Menu)`
     position: absolute;
-    width: 100%;
+    margin-left: 75%;
+    margin-right: 0%;
+    width: 25%;
     max-height: 300px;
     overflow-y: auto;
     z-index: 1000;
   `;
-
-
   
     const handleSearch = (e) => {
       e.preventDefault();
@@ -84,8 +86,8 @@ function Navbar() {
                         key={book.id}
                         onClick={() => setSearchTerm(book.name)}
                       >
-                        <img src={book.image} alt={book.name} style={{ width: "120px", height: "130px", marginBottom: "10px", border: "3px solid black" }} />
-                        {book.name}
+                        <img src={book.image} alt={book.name} style={{ width: "70px", height: "80px", marginBottom: "0px", border: "3px solid black" }} />
+                         {book.name}
                       </Dropdown.Item>
                     ))}
                   </DropdownMenu>
