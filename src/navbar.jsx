@@ -17,6 +17,7 @@ function Navbar() {
     position: absolute;
     margin-left: 75%;
     margin-right: 0%;
+    padding: 0%;
     width: 25%;
     max-height: 300px;
     overflow-y: auto;
@@ -86,7 +87,7 @@ function Navbar() {
                         key={book.id}
                         onClick={() => setSearchTerm(book.name)}
                       >
-                        <img src={book.image} alt={book.name} style={{ width: "70px", height: "80px", marginBottom: "0px", border: "3px solid black" }} />
+                        <img src={book.image} alt={book.name} style={{ width: "70px", height: "80px", marginBottom: "0px", border: "3px solid black", padding: "0%", marginLeft: "0px" }} />
                          {book.name}
                       </Dropdown.Item>
                     ))}
