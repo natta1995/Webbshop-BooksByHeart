@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 const BookClub = () => {
     return (
         <>
+        
             <div style={{ textAlign: "center", marginTop: "2%", marginBottom: "3%", backgroundColor: "#f0f0f0", padding: "2%"}}>
                 <h1 style={{fontFamily: "cursive"}}>Välkommen till vår bokklubbsida!</h1>
                 <h6 style={{fontFamily: "cursive"}} >Alla våra bokklubbar finns inte här ännu, hittar du inget som passar dig just nu så kommer fler att dyka upp under hösten.</h6>
