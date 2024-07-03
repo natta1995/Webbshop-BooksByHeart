@@ -27,7 +27,6 @@ function Navbar() {
       }
     };
 
-    // Hantera dynamisk filtrering av böcker baserat på söktermen
     const handleInputChange = (e) => {
       const term = e.target.value;
       setSearchTerm(term);
