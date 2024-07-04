@@ -37,6 +37,7 @@ function Navbar() {
       if (book) {
         navigate(`/product/${book.id}`);
         setFilteredBooks([]);
+        setSearchTerm("");
       } else {
         alert("Ingen bok hittades med den söktermen.");
       }
@@ -59,6 +60,7 @@ function Navbar() {
       setSearchTerm(book.name);
       setFilteredBooks([]); 
       navigate(`/product/${book.id}`);
+      setSearchTerm("");
     };
     
 
