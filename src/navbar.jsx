@@ -36,6 +36,7 @@ function Navbar() {
 
       if (book) {
         navigate(`/product/${book.id}`);
+        setFilteredBooks([]);
       } else {
         alert("Ingen bok hittades med den söktermen.");
       }
@@ -53,6 +54,13 @@ function Navbar() {
         setFilteredBooks([]);
       }
     };
+
+    const handleBookSelect = (book) => {
+      setSearchTerm(book.name);
+      setFilteredBooks([]); 
+      navigate(`/product/${book.id}`);
+    };
+    
 
     return (
     
@@ -85,7 +93,7 @@ function Navbar() {
                         as={Link}
                         to={`/product/${book.id}`}
                         key={book.id}
-                        onClick={() => setSearchTerm(book.name)}
+                        onClick={() => handleBookSelect(book)}
                       >
                          {book.name}
                       </Dropdown.Item>
