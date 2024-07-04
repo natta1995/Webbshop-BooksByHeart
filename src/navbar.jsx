@@ -97,6 +97,7 @@ function Navbar() {
                         key={book.id}
                         onClick={() => handleBookSelect(book)}
                       >
+                        <img src={book.image} alt={book.name} style={{ width: "40px", height: "50px", border: "3px solid black", marginRight: "20px" }} />
                          {book.name}
                       </Dropdown.Item>
                     ))}
