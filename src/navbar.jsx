@@ -87,7 +87,6 @@ function Navbar() {
                         key={book.id}
                         onClick={() => setSearchTerm(book.name)}
                       >
-                        <img src={book.image} alt={book.name} style={{ width: "70px", height: "80px", marginBottom: "0px", border: "3px solid black", padding: "0%", marginLeft: "0px" }} />
                          {book.name}
                       </Dropdown.Item>
                     ))}
