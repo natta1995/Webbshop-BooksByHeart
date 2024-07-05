@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { getProductById } from "../database";
 import { Button } from "react-bootstrap";
 import styled from "styled-components";
+import { useCart } from "./CartContext";
 
 const Container = styled.div`
   margin-top: 80px;
@@ -72,6 +73,11 @@ const ProductInfo = styled.div`
 const ProductDetailPage = () => {
   const { id } = useParams();
   const product = getProductById(id);
+  const { dispatch } = useCart();
+
+  const addToCart = () => {
+    dispatch({ type: 'ADD_TO_CART', payload: product });
+  };
 
   return (
     <Container>
@@ -95,7 +101,7 @@ const ProductDetailPage = () => {
           <h6>{product.des}</h6>
           <div>
             <h3>Pris: {product.cost}</h3>
-            <Button style={{ backgroundColor: "red", borderColor: "red", marginTop: "2%" }}>Köp</Button>
+            <Button style={{ backgroundColor: "red", borderColor: "red", marginTop: "2%" }}  onClick={addToCart}>Köp</Button>
           </div>
         </ProductInfo>
       )}
