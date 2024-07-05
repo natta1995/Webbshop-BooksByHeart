@@ -122,7 +122,7 @@ function Navbar() {
               </Form>
               <CartIcon onClick={() => setShowCart(!showCart)}>
             <FontAwesomeIcon icon={faShoppingCart} />
-            <span> ({cart.length})</span>
+            <span style={{fontSize: "15px"}}> {cart.length}</span>
           </CartIcon>
             </BootstrapNavbar.Collapse>
           </Container>
