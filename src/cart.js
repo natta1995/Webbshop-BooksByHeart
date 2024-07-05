@@ -8,7 +8,7 @@ const CartContainer = styled.div`
   top: 0;
   right: 0;
   width: 300px;
-  height: 100%;
+  height: 50%;
   background-color: white;
   box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
   padding: 20px;

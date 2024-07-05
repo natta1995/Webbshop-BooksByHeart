@@ -69,6 +69,14 @@ const ProductInfo = styled.div`
   }
 `;
 
+const AddToCartButton = styled(Button)`
+  background-color: red;
+  border-color: red;
+  margin-top: 2%;
+  position: relative;
+  z-index: 2; // Lägg till z-index här för att säkerställa att knappen ligger överst
+`;
+
 
 const ProductDetailPage = () => {
   const { id } = useParams();
@@ -101,7 +109,7 @@ const ProductDetailPage = () => {
           <h6>{product.des}</h6>
           <div>
             <h3>Pris: {product.cost}</h3>
-            <Button style={{ backgroundColor: "red", borderColor: "red", marginTop: "2%" }}  onClick={addToCart}>Köp</Button>
+            <AddToCartButton  onClick={addToCart}>Köp</AddToCartButton>
           </div>
         </ProductInfo>
       )}
