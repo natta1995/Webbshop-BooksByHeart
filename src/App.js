@@ -7,10 +7,12 @@ import ContactPage from "./pages/contacts";
 import Footer from "./footer"
 import ProductDetailPage from "./pages/productDetail";
 import BookClub from "./pages/bookclub";
+import { CartProvider } from "./cartContext";
 
 
 function App() {
   return (
+    <CartProvider>
     <Router>
        <Navbar />
       <Routes>
@@ -22,7 +24,7 @@ function App() {
       </Routes>
       <Footer />
     </Router>
-
+    </CartProvider>
   );
 }
 
