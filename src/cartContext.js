@@ -1,6 +1,5 @@
 import React, { createContext, useReducer, useContext } from 'react';
 
-// Skapa en kontext
 const CartContext = createContext();
 
 const cartReducer = (state, action) => {
