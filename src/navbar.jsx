@@ -7,6 +7,8 @@ import styled from "styled-components";
 import booksData from "./database"
 import { useCart } from "./cartContext"; 
 import Cart from "./cart"; 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
 
 
@@ -119,7 +121,7 @@ function Navbar() {
                 )}
               </Form>
               <CartIcon onClick={() => setShowCart(!showCart)}>
-            <i className="fas fa-shopping-cart"></i>
+            <FontAwesomeIcon icon={faShoppingCart} />
             <span> ({cart.length})</span>
           </CartIcon>
             </BootstrapNavbar.Collapse>
