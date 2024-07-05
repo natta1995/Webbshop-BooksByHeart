@@ -5,17 +5,16 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom"
 import styled from "styled-components";
 import booksData from "./database"
-import { useCart } from "./cartContext"; // Importera varukorgskontexten
-import Cart from "./cart"; // Importera varukorgskomponenten
-
+import { useCart } from "./cartContext"; 
+import Cart from "./cart"; 
 
 
 
 function Navbar() {
     const [searchTerm, setSearchTerm] = useState(""); 
     const [filteredBooks, setFilteredBooks] = useState([]);
-    const [showCart, setShowCart] = useState(false); // Tillstånd för att visa eller dölja varukorgen
-    const { cart } = useCart(); //
+    const [showCart, setShowCart] = useState(false); 
+    const { cart } = useCart(); 
     const navigate = useNavigate();
 
     const DropdownMenu = styled(Dropdown.Menu)`
