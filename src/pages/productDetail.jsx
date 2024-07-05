@@ -74,7 +74,7 @@ const AddToCartButton = styled(Button)`
   border-color: red;
   margin-top: 2%;
   position: relative;
-  z-index: 2; // Lägg till z-index här för att säkerställa att knappen ligger överst
+  z-index: 2; 
 `;
 
 
