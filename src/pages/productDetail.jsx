@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import { getProductById } from "../database";
 import { Button } from "react-bootstrap";
 import styled from "styled-components";
-import { useCart } from "./CartContext";
+import { useCart } from "../cartContext";
 
 const Container = styled.div`
   margin-top: 80px;

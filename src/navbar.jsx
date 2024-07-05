@@ -5,7 +5,8 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom"
 import styled from "styled-components";
 import booksData from "./database"
-
+import { useCart } from "./cartContext"; // Importera varukorgskontexten
+import Cart from "./cart"; // Importera varukorgskomponenten
 
 
 
@@ -13,6 +14,8 @@ import booksData from "./database"
 function Navbar() {
     const [searchTerm, setSearchTerm] = useState(""); 
     const [filteredBooks, setFilteredBooks] = useState([]);
+    const [showCart, setShowCart] = useState(false); // Tillstånd för att visa eller dölja varukorgen
+    const { cart } = useCart(); //
     const navigate = useNavigate();
 
     const DropdownMenu = styled(Dropdown.Menu)`
@@ -25,6 +28,16 @@ function Navbar() {
     overflow-y: auto;
     z-index: 1000;
   `;
+
+  const CartIcon = styled.div`
+  position: relative;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: black;
+  margin-left: 1rem;
+  display: flex;
+  align-items: center;
+`;
   
     const handleSearch = (e) => {
       e.preventDefault();
@@ -106,8 +119,13 @@ function Navbar() {
                   </DropdownMenu>
                 )}
               </Form>
+              <CartIcon onClick={() => setShowCart(!showCart)}>
+            <i className="fas fa-shopping-cart"></i>
+            <span> ({cart.length})</span>
+          </CartIcon>
             </BootstrapNavbar.Collapse>
           </Container>
+          {showCart && <Cart />}
         </BootstrapNavbar>
       );
   }
