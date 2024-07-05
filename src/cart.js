@@ -28,6 +28,10 @@ const Cart = () => {
     dispatch({ type: 'REMOVE_FROM_CART', payload: product });
   };
 
+  const exitButton = () => {
+    window.location.reload()
+  }
+
   return (
     <CartContainer>
       <h2>Varukorg</h2>
@@ -42,8 +46,9 @@ const Cart = () => {
         ))
       )}
       {cart.length > 0 && (
-        <Button variant="primary" onClick={() => dispatch({ type: 'CLEAR_CART' })}>Töm varukorg</Button>
+        <Button variant="primary" onClick={() => dispatch({ type: 'CLEAR_CART' })}>Slutför köp</Button>
       )}
+      <Button onClick={exitButton}>Avbryt</Button>
     </CartContainer>
   );
 };
