@@ -40,7 +40,7 @@ const Cart = () => {
       ) : (
         cart.map(product => (
           <CartItem key={product.id}>
-            <span>{product.name}</span>
+            <span>{product.name} {product.cost}</span>
             <Button variant="danger" size="sm" onClick={() => removeFromCart(product)}>X</Button>
           </CartItem>
         ))
