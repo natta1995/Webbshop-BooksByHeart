@@ -13,7 +13,7 @@ const BookClubApply = () => {
             <div>
             <input type="number" id="number-of-kids" placeholder=" Antal Barn" style={{marginLeft: "2%",marginBottom:"1%", width: "30%" }}/>
             </div>
-
+            <h5>Vilka eller vilken Bokklubb vill du anmäla dig till?</h5>
             <div>
             <label>
                 <input type="checkbox" name="option" value="option1" /> Nyckelpigorna
