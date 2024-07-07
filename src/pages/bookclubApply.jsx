@@ -2,6 +2,7 @@ const BookClubApply = () => {
     return (
     <>
         <h1>Ansökan om medlemskap</h1>
+        <p>Observera att åldrarna till de olika bokklubbarna endast är en generall rekomendation, och inget krav.</p>
 
         <form>
             <div>
