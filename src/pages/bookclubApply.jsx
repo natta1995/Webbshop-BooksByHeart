@@ -18,7 +18,10 @@ const BookClubApply = () => {
             <input type="text" id="name-kids" name="name-kids" placeholder=" Barn/Barnens namn (frivilligt) " style={{marginLeft: "2%",marginBottom:"1%", width: "30%" }}/>
             </div>
 
-            
+            <div>
+            <p>Har du ett/flera barn med någon form av funktionsnedsättning, som vi behöver ta hänsyn till?</p> 
+            <textarea id="message" placeholder="Skriv ditt meddelande här..." name="message" rows="8" style={{marginLeft: "2%", width: "30%"}}/>
+          </div>
 
             <h5>Vilka eller vilken Bokklubb vill du anmäla dig till?</h5>
             <div>
