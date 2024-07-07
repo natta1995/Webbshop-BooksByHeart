@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom"
 import styled from "styled-components";
 import booksData from "./database"
 import { useCart } from "./cartContext"; 
-import Cart from "./cart"; 
+import Cart from "./pages/cart"; 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 

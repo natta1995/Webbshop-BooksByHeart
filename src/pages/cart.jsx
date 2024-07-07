@@ -1,5 +1,5 @@
 import React from 'react';
-import { useCart } from './cartContext';
+import { useCart } from '../cartContext';
 import { Button } from 'react-bootstrap';
 import styled from 'styled-components';
 
