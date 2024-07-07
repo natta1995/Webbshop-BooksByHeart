@@ -21,6 +21,19 @@ const CartItem = styled.div`
   margin-bottom: 10px;
 `;
 
+const ButtonContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+`;
+
+const CancelButtonContainer = styled.div`
+  display: flex;
+  justify-content: flex-end;
+`;
+
+
 const Cart = () => {
   const { cart, dispatch } = useCart();
 
@@ -46,9 +59,13 @@ const Cart = () => {
         ))
       )}
       {cart.length > 0 && (
-        <Button variant="primary" onClick={() => dispatch({ type: 'CLEAR_CART' })}>Slutför köp</Button>
+      <ButtonContainer>
+        <Button style={{backgroundColor: "green", borderColor: "green"}} variant="primary" onClick={() => dispatch({ type: 'CLEAR_CART' })}>Slutför köp</Button>
+      </ButtonContainer>
       )}
+      <CancelButtonContainer>
       <Button onClick={exitButton}>Avbryt</Button>
+      </CancelButtonContainer>
     </CartContainer>
   );
 };
