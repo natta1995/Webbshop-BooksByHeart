@@ -20,7 +20,6 @@ const ProductPage = () => {
             <h6>{product.by}</h6>
             <h6>{product.sort}</h6> 
             <h5>{product.cost}</h5>
-            <Button style={{backgroundColor: "red", borderColor: "red", justifyContent: "center", width: "90%"}}>Köp</Button>
           </Link>
           
         ))}
