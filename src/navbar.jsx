@@ -21,7 +21,7 @@ function Navbar() {
 
     const DropdownMenu = styled(Dropdown.Menu)`
     position: absolute;
-    margin-left: 75%;
+    margin-left: 72%;
     margin-right: 0%;
     padding: 0%;
     width: 25%;
