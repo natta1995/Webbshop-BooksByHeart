@@ -29,6 +29,7 @@ const BookClubApply = () => {
                 <input type="checkbox" name="option" value="option3" /> Fåglarna
             </label>
             </div>
+            <button>Skicka ansökan</button>
         </form>
      </> 
     )
