@@ -115,23 +115,6 @@ const HomePage = () => {
         </div>
       </div>
 
-      <div style={sectionStyle}>
-        <div style={imageContainerStyle}>
-          <img src={intervjugirl} alt="intervjugirl" style={{ width: "100%", maxWidth: "600px" }} />
-        </div>
-        <div style={sectionContentStyle}>
-          <h2>Barn och ungas utveckling är viktigt för oss</h2>
-          <p style={{marginLeft: "0%", marginRight: "10%"}}>
-            Popcorn
-          </p>
-          <div style={{display: "flex", justifyContent: "flex-end", alignSelf: "flex-end", marginTop: "10%", marginRight: "8%"}}>
-          <Link to="/"> Läs hela artikeln</Link>
-          </div>
-        </div>
-      </div>
-
-
-
     </div>
 
     
