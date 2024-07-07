@@ -22,7 +22,7 @@ const BookClub = () => {
                     <p>Pris: 399:-</p>
                     <h6>Beskrivning: </h6>
                     <p>Varje onsdag kommer en ny bok i posten. Du kan när som helst välja att avsluta ditt medlemskap hos oss.</p>
-                    <Link> Anmäl intresse </Link>
+                    <Link to={"/bookclub/apply"}> Anmäl intresse </Link>
                 </div>
             </div>
     
@@ -35,7 +35,7 @@ const BookClub = () => {
                     <p>Pris: 499:-</p>
                     <h6>Beskrivning: </h6>
                     <p>Varje onsdag kommer en ny bok i posten. Du kan när som helst välja att avsluta ditt medlemskap hos oss.</p>
-                    <Link> Anmäl intresse </Link>
+                    <Link to={"/bookclub/apply"}> Anmäl intresse </Link>
                 </div>
             </div>
     
@@ -48,7 +48,7 @@ const BookClub = () => {
                     <p>Pris: 599:-</p>
                     <h6>Beskrivning: </h6>
                     <p>Varje onsdag kommer en ny bok i posten. Du kan när som helst välja att avsluta ditt medlemskap hos oss.</p>
-                    <Link> Anmäl intresse </Link>
+                    <Link to={"/bookclub/apply"}> Anmäl intresse </Link>
                 </div>
             </div>
         </>

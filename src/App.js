@@ -7,6 +7,7 @@ import ContactPage from "./pages/contacts";
 import Footer from "./footer"
 import ProductDetailPage from "./pages/productDetail";
 import BookClub from "./pages/bookclub";
+import BookClubApply from "./pages/bookclubApply";
 import { CartProvider } from "./cartContext";
 
 
@@ -21,6 +22,7 @@ function App() {
         <Route path="/product/:id" element={<ProductDetailPage />} />
         <Route path="/contact" element={<ContactPage/>} />
         <Route path="/bookclub" element={<BookClub/>} />
+        <Route path="/bookclub/apply" element={<BookClubApply />} />
       </Routes>
       <Footer />
     </Router>
