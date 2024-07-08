@@ -98,7 +98,6 @@ const HomePage = () => {
         </div>
       </div>
 
-      
 
       <div style={sectionStyle}>
         <div style={imageContainerStyle}>
@@ -116,8 +115,6 @@ const HomePage = () => {
       </div>
 
     </div>
-
-    
   );
 };
 
