@@ -1,10 +1,34 @@
+        import React, { useState } from 'react'; 
         import img1 from "../img/reading smallest.jpg"
         import img2 from "../img/readingkid.jpg"
         import img3 from "../img/flera barn.jpg"
+        import styled from 'styled-components';
+        import { Button } from 'react-bootstrap';
 
+
+        const OptionsContainer = styled.div`
+  margin-top: 10px;
+`;
+
+const OptionButton = styled(Button)`
+  display: block;
+  margin-top: 5px;
+`;
 
 
         const BookClubApply = () => {
+            const [showOptions, setShowOptions] = useState(false);
+            const [selectedOption, setSelectedOption] = useState('');
+          
+            const toggleOptions = () => {
+              setShowOptions(!showOptions);
+            };
+          
+            const handleOptionClick = (option) => {
+              setSelectedOption(option);
+              setShowOptions(false);
+            };
+
             return (
             <>
                 <h1>Ansökan om medlemskap</h1>
@@ -19,9 +43,30 @@
                     </div>
 
                     <div>
+                        <p>Var god att välj i vilket format du vill ha böckerna i</p>
+          <Button onClick={toggleOptions}>Välj ett alternativ</Button>
+          {showOptions && (
+            <OptionsContainer>
+              <OptionButton variant="secondary" onClick={() => handleOptionClick('Orginal format (permbok)')}>Orginal formt (permbok)</OptionButton>
+              <OptionButton variant="secondary" onClick={() => handleOptionClick('Blindskrift')}>Blindskrift</OptionButton>
+              <OptionButton variant="secondary" onClick={() => handleOptionClick('Ljudbok')}>Ljudbok</OptionButton>
+              <OptionButton variant="secondary" onClick={() => handleOptionClick('Större format')}>Större format</OptionButton>
+            </OptionsContainer>
+          )}
+          {selectedOption && <p>Valt alternativ: {selectedOption}</p>}
+        </div>
+
+                    <div>
                     <p>Har barnet i frågan någon form av funktionsnedsättning,<br></br>  som vi behöver ta hänsyn till?</p> 
-                    <textarea id="message" placeholder="Skriv ditt meddelande här..." name="message" rows="8" style={{marginLeft: "2%", width: "30%"}}/>
+ 
+                    <textarea id="message" placeholder="Skriv ditt svar här..." name="message" rows="8" style={{marginLeft: "2%", width: "30%"}}/>
                 </div>
+                <div>
+                    <p>Finns det något annat som vi bör känna till?</p> 
+ 
+                    <textarea id="message" placeholder="Skriv ditt svar här..." name="message" rows="8" style={{marginLeft: "2%", width: "30%"}}/>
+                </div>
+
 
                     <h5>Vilka eller vilken Bokklubb vill du anmäla dig till?</h5>
 
