@@ -19,7 +19,7 @@ const BookClubApply = () => {
             </div>
 
             <div>
-            <p>Har du ett/flera barn med någon form av funktionsnedsättning, som vi behöver ta hänsyn till?</p> 
+            <p>Har du ett/flera barn med någon form av funktionsnedsättning,<br></br>  som vi behöver ta hänsyn till?</p> 
             <textarea id="message" placeholder="Skriv ditt meddelande här..." name="message" rows="8" style={{marginLeft: "2%", width: "30%"}}/>
           </div>
 
