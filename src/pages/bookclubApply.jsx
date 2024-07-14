@@ -26,17 +26,17 @@ const BookClubApply = () => {
             <h5>Vilka eller vilken Bokklubb vill du anmäla dig till?</h5>
             <div>
             <label>
-                <input type="checkbox" name="option" value="option1" /> Nyckelpigorna
+                <input type="checkbox" name="option1" value="option1" /> Nyckelpigorna
             </label>
             </div>
             <div>
             <label>
-                <input type="checkbox" name="option" value="option2" /> Björnarna
+                <input type="checkbox" name="option2" value="option2" /> Björnarna
             </label>
             </div>
             <div>
             <label>
-                <input type="checkbox" name="option" value="option3" /> Fåglarna
+                <input type="checkbox" name="option3" value="option3" /> Fåglarna
             </label>
             </div>
             <button>Skicka ansökan</button>
