@@ -26,28 +26,28 @@
                     <h5>Vilka eller vilken Bokklubb vill du anmäla dig till?</h5>
 
                     <div>
-                        <img src={img1} alt="babyreading" style={{ width: "40%", marginLeft: "20px" }}/>
+                        <img src={img1} alt="babyreading" style={{ width: "20%", marginLeft: "20px" }}/>
                         <label>
                             <input type="checkbox" name="option1" value="option1" /> Nyckelpigorna
                         </label>
                     </div>
 
                     <div>
-                        <img src={img2} alt="babyreading" style={{ width: "40%", marginLeft: "20px" }}/>
+                        <img src={img2} alt="babyreading" style={{ width: "20%", marginLeft: "20px" }}/>
                         <label>
                             <input type="checkbox" name="option2" value="option2" /> Björnarna
                         </label>
                     </div>
 
                     <div>
-                        <img src={img3} alt="babyreading" style={{ width: "40%", marginLeft: "20px" }}/>
+                        <img src={img3} alt="babyreading" style={{ width: "20%", marginLeft: "20px" }}/>
                         <label>
                             <input type="checkbox" name="option3" value="option3" /> Fåglarna
                         </label>
                     </div>  
 
                     <button>Skicka ansökan</button>
-                    
+
                 </form>
             </> 
             )
