@@ -92,6 +92,7 @@ function Navbar() {
                 <Nav.Link as={Link} to="/products">Böcker</Nav.Link>
                 <Nav.Link as={Link} to="/contact">Kontakt</Nav.Link>
                 <Nav.Link as={Link} to="/bookclub">Bokklubb</Nav.Link>
+                <Nav.Link as={Link} to="/bookclub/apply">Ansökan</Nav.Link>
               </Nav>
               <Form className="d-flex" onSubmit={handleSearch}>
                 <InputGroup>
