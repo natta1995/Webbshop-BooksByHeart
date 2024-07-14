@@ -1,3 +1,7 @@
+import img1 from "../img/reading smallest.jpg"
+import img2 from "../img/readingkid.jpg"
+import img3 from "../img/flera barn.jpg"
+
 
 
 const BookClubApply = () => {
@@ -27,17 +31,20 @@ const BookClubApply = () => {
 
             <h5>Vilka eller vilken Bokklubb vill du anmäla dig till?</h5>
             <div>
+            <img src={img1} alt="babyreading" style={{ width: "40%", marginLeft: "20px" }}/>
             <label>
                 <input type="checkbox" name="option1" value="option1" /> Nyckelpigorna
             </label>
             </div>
             <div>
+            <img src={img2} alt="babyreading" style={{ width: "40%", marginLeft: "20px" }}/>
             <label>
                 <input type="checkbox" name="option2" value="option2" /> Björnarna
             </label>
             </div>
             <div>
-            <label>
+
+            <label><img src={img3} alt="babyreading" style={{ width: "40%", marginLeft: "20px" }}/>
                 <input type="checkbox" name="option3" value="option3" /> Fåglarna
             </label>
             </div>

@@ -54,7 +54,8 @@ const Cart = () => {
         cart.map(product => (
           <CartItem key={product.id}>
             <span>{product.name} {product.cost}</span>
-            <Button variant="danger" size="sm" onClick={() => removeFromCart(product)}>X</Button>
+            <Button variant="danger" size="sm" onClick={() => removeFromCart(product)}>
+            </Button>
           </CartItem>
         ))
       )}
