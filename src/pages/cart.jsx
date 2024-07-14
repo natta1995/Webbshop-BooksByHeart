@@ -33,6 +33,13 @@ const CancelButtonContainer = styled.div`
   justify-content: flex-end;
 `;
 
+const TotalAmount = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  font-weight: bold;
+`;
+
 
 const Cart = () => {
   const { cart, dispatch } = useCart();
@@ -45,6 +52,10 @@ const Cart = () => {
     window.location.reload()
   }
 
+  const calculateTotal = () => {
+    return cart.reduce((total, product) => total + parseFloat(product.cost), 0).toFixed(2);
+  };
+
   return (
     <CartContainer>
       <h2>Varukorg</h2>
@@ -54,20 +65,27 @@ const Cart = () => {
         cart.map(product => (
           <CartItem key={product.id}>
             <span>{product.name} {product.cost}</span>
-            <Button variant="danger" size="sm" onClick={() => removeFromCart(product)}>
+            <Button variant="danger" size="sm" onClick={() => removeFromCart(product)}>X
             </Button>
           </CartItem>
         ))
       )}
       {cart.length > 0 && (
+        <>
+            <TotalAmount>
+            <span>Totalbelopp:</span>
+            <span>{calculateTotal()} kr</span>
+          </TotalAmount>
       <ButtonContainer>
         <Button style={{backgroundColor: "green", borderColor: "green"}} variant="primary" onClick={() => dispatch({ type: 'CLEAR_CART' })}>Slutför köp</Button>
       </ButtonContainer>
+      </>
       )}
       <CancelButtonContainer>
       <Button onClick={exitButton}>Avbryt</Button>
       </CancelButtonContainer>
     </CartContainer>
+  
   );
 };
 
