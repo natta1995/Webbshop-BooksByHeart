@@ -26,12 +26,12 @@ const OptionButton = styled(Button)`
 const FormContainer = styled.div`
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     margin-left: 2%;
 `;
 
 const BookClubSection = styled.div `
-margin: 5%
+    margin: 5%
 `
 
 
@@ -56,6 +56,7 @@ margin: 5%
 
                 <form>
                     <FormContainer>
+                        
                         <input type="text" id="name" name="name" placeholder=" Ditt Namn " style={{marginLeft: "2%", marginBottom:"1%",width: "30%" }}/>
                         <input type="email" id="email" name="email" placeholder=" Din Email " style={{marginLeft: "2%",marginBottom:"1%", width: "30%" }}/>
                         <input type="number" id="number-of-kids" placeholder=" Antal Barn" style={{marginLeft: "2%",marginBottom:"1%", width: "30%" }}/>
