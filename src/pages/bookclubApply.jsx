@@ -6,6 +6,9 @@ import img3 from "../img/flera barn.jpg"
 import styled from 'styled-components';
 
 
+const ApplicationDiv = styled.div `
+background-color: green
+`;
 
 const OptionsContainer = styled.div`
     margin-top: 10px;
@@ -43,7 +46,7 @@ margin: 5%
             };
 
             return (
-            <>
+            <ApplicationDiv>
                 <h1>Ansökan om medlemskap</h1>
                 <p>(Observera att åldrarna till de olika bokklubbarna endast är en generall rekomendation, och inget krav.)</p>
 
@@ -107,7 +110,7 @@ margin: 5%
                     <button>Skicka ansökan</button>
 
                 </form>
-            </> 
+            </ApplicationDiv> 
             )
         }
 
