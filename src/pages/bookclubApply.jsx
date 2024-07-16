@@ -7,7 +7,11 @@ import styled from 'styled-components';
 
 
 const ApplicationDiv = styled.div `
-background-color: green
+    background-color: lightgray;
+    margin: 15%;
+    margin-top: 7%;
+    padding: 5%;
+    text-align: center;
 `;
 
 const OptionsContainer = styled.div`
