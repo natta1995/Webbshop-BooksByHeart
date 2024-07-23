@@ -100,6 +100,8 @@ const HomePage = () => {
 
 
 
+
+
       <div style={sectionStyle}>
         <div style={imageContainerStyle}>
           <img src={intervjugirl} alt="intervjugirl" style={{ width: "100%", maxWidth: "600px" }} />
