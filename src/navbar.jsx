@@ -100,6 +100,7 @@ function Navbar() {
                     placeholder="Sök efter en bok..."
                     value={searchTerm}
                     onChange={handleInputChange}
+                    style={{width: "300px"}}
                   />
                   <Button variant="primary" type="submit">
                     Sök
