@@ -21,11 +21,13 @@ const Footer = () => {
     flexDirection: isMobile ? "column" : "row",
     maxWidth: "800px",
     margin: "0 auto",
-    textAlign: isMobile ? "center" : "left"
+    textAlign: isMobile ? "center" : "left",
+    gap: isMobile ? "20px" : "60px",
   };
 
   const sectionStyle = {
-    marginBottom: isMobile ? "20px" : "0"
+    marginBottom: isMobile ? "20px" : "0",
+    
   };
 
   return (
