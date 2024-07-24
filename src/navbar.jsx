@@ -38,7 +38,21 @@ function Navbar() {
   margin-left: 1rem;
   display: flex;
   align-items: center;
+
+  span {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 0.75rem;
+}
 `;
+
+
+
   
     const handleSearch = (e) => {
       e.preventDefault();
@@ -124,7 +138,7 @@ function Navbar() {
               </Form>
               <CartIcon onClick={() => setShowCart(!showCart)}>
             <FontAwesomeIcon icon={faShoppingCart} />
-            <span style={{fontSize: "15px"}}> {cart.length}</span>
+            {cart.length > 0 && <span>{cart.length}</span>}
           </CartIcon>
             </BootstrapNavbar.Collapse>
           </Container>
