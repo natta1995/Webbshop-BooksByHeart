@@ -56,7 +56,6 @@ const BookClubSection = styled.div `
 
                 <form>
                     <FormContainer>
-                        
                         <input type="text" id="name" name="name" placeholder=" Ditt Namn " style={{marginLeft: "2%", marginBottom:"1%",width: "30%" }}/>
                         <input type="email" id="email" name="email" placeholder=" Din Email " style={{marginLeft: "2%",marginBottom:"1%", width: "30%" }}/>
                         <input type="number" id="number-of-kids" placeholder=" Antal Barn" style={{marginLeft: "2%",marginBottom:"1%", width: "30%" }}/>
@@ -64,11 +63,11 @@ const BookClubSection = styled.div `
                     </FormContainer>
 
                     <div>
-                        <p>Var god att välj i vilket format du vill ha böckerna i</p>
+                        <p>Välj bokformatet som passar dig bäst:</p>
           <Button onClick={toggleOptions}>Välj ett alternativ</Button>
           {showOptions && (
             <OptionsContainer>
-              <OptionButton variant="secondary" onClick={() => handleOptionClick('Orginal format (permbok)')}>Orginal formt (permbok)</OptionButton>
+              <OptionButton variant="secondary" onClick={() => handleOptionClick('Orginal format (Inbunden)')}>Orginal formt (Inbunden)</OptionButton>
               <OptionButton variant="secondary" onClick={() => handleOptionClick('Blindskrift')}>Blindskrift</OptionButton>
               <OptionButton variant="secondary" onClick={() => handleOptionClick('Ljudbok')}>Ljudbok</OptionButton>
               <OptionButton variant="secondary" onClick={() => handleOptionClick('Förstorad text')}>Förstorad text</OptionButton>
@@ -80,12 +79,12 @@ const BookClubSection = styled.div `
                     <div>
                     <p>Har barnet i frågan någon form av funktionsnedsättning,<br></br>  som vi behöver ta hänsyn till?</p> 
  
-                    <textarea id="message" placeholder="Skriv ditt svar här..." name="message" rows="8" style={{marginLeft: "2%", width: "30%"}}/>
+                    <textarea id="message" placeholder="Skriv ditt svar här..." name="message" rows="5" style={{marginLeft: "2%", width: "60%"}}/>
                 </div>
                 <div>
                     <p>Finns det något annat som vi bör känna till?</p> 
  
-                    <textarea id="message" placeholder="Skriv ditt svar här..." name="message" rows="8" style={{marginLeft: "2%", width: "30%"}}/>
+                    <textarea id="message" placeholder="Skriv ditt svar här..." name="message" rows="5" style={{marginLeft: "2%", width: "60%"}}/>
                 </div>
 
 

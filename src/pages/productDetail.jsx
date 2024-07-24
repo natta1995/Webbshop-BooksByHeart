@@ -75,6 +75,12 @@ const AddToCartButton = styled(Button)`
   margin-top: 2%;
   position: relative;
   z-index: 2; 
+
+  
+    &:hover {
+    background-color: green;
+    border-color: green;
+  }
 `;
 
 
