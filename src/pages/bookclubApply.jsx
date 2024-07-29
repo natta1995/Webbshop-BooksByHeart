@@ -25,15 +25,32 @@ const BookClubSection = styled.div `
     margin: 5%
 `
 
+const RadioButton = styled.input`
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+`;
+
+const BookClubLabel = styled.label`
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+`;
+
 
     const BookClubApply = () => {
             
             const [selectedOption, setSelectedOption] = useState('');
+            const [selectedClub, setSelectedClub] = useState('');
           
     
             const handleOptionChange = (event) => {
                 setSelectedOption(event.target.value);
               };
+
+              const handleClubChange = (event) => {
+                setSelectedClub(event.target.value);
+            };
 
             return (
             <ApplicationDiv>
@@ -79,30 +96,50 @@ const BookClubSection = styled.div `
  
                     <textarea id="message" placeholder="Skriv ditt svar här..." name="message" rows="5" style={{marginLeft: "2%", width: "60%"}}/>
                 </div>
+                <BookClubSection>
+                    <img src={img1} alt="babyreading" style={{ width: "20%", marginLeft: "20px" }}/>
+                    <BookClubLabel>
+                        <RadioButton 
+                            type="radio" 
+                            name="book-club" 
+                            value="Nyckelpigorna" 
+                            checked={selectedClub === 'Nyckelpigorna'} 
+                            onChange={handleClubChange} 
+                        />
+                        Nyckelpigorna
+                    </BookClubLabel>
+                </BookClubSection>
 
+                <BookClubSection>
+                    <img src={img2} alt="babyreading" style={{ width: "20%", marginLeft: "20px" }}/>
+                    <BookClubLabel>
+                        <RadioButton 
+                            type="radio" 
+                            name="book-club" 
+                            value="Björnarna" 
+                            checked={selectedClub === 'Björnarna'} 
+                            onChange={handleClubChange} 
+                        />
+                        Björnarna
+                    </BookClubLabel>
+                </BookClubSection>
 
-                    <h5>Vilka eller vilken Bokklubb vill du anmäla dig till?</h5>
+                <BookClubSection>
+                    <img src={img3} alt="babyreading" style={{ width: "20%", marginLeft: "20px" }}/>
+                    <BookClubLabel>
+                        <RadioButton 
+                            type="radio" 
+                            name="book-club" 
+                            value="Fåglarna" 
+                            checked={selectedClub === 'Fåglarna'} 
+                            onChange={handleClubChange} 
+                        />
+                        Fåglarna
+                    </BookClubLabel>
+                </BookClubSection> 
 
-                    <BookClubSection>
-                        <img src={img1} alt="babyreading" style={{ width: "20%", marginLeft: "20px" }}/>
-                        <label>
-                            <input type="checkbox" name="option1" value="option1" /> Nyckelpigorna
-                        </label>
-                    </BookClubSection>
+                    <p>Vilka Bokklubb vill du anmäla dig och ditt barn till?</p>
 
-                    <BookClubSection>
-                        <img src={img2} alt="babyreading" style={{ width: "20%", marginLeft: "20px" }}/>
-                        <label>
-                            <input type="checkbox" name="option2" value="option2" /> Björnarna
-                        </label>
-                    </BookClubSection>
-
-                    <BookClubSection>
-                        <img src={img3} alt="babyreading" style={{ width: "20%", marginLeft: "20px" }}/>
-                        <label>
-                            <input type="checkbox" name="option3" value="option3" /> Fåglarna
-                        </label>
-                    </BookClubSection>  
 
                     <button>Skicka ansökan</button>
 
