@@ -1,18 +1,19 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import HomePage from "./pages/home";
-import ProductPage from "./pages/products";
 import Navbar from "./navbar"
-import ContactPage from "./pages/contacts";
 import Footer from "./footer"
-import ProductDetailPage from "./pages/productDetail";
-import BookClub from "./pages/bookclub";
-import BookClubApply from "./pages/bookclubApply";
 import { CartProvider } from "./cartContext";
 
+import HomePage from "./pages/home";
+import ProductPage from "./pages/products";
+import ProductDetailPage from "./pages/productDetail";
+import ContactPage from "./pages/contacts";
+import BookClub from "./pages/bookclub";
+import BookClubApply from "./pages/bookclubApply";
 
 
 function App() {
+  
   return (
     <CartProvider>
       <Router>
