@@ -1,5 +1,4 @@
 import { useState } from 'react'; 
-import { Button } from 'react-bootstrap';
 import img1 from "../img/reading smallest.jpg"
 import img2 from "../img/readingkid.jpg"
 import img3 from "../img/flera barn.jpg"
@@ -14,20 +13,12 @@ const ApplicationDiv = styled.div `
     text-align: center;
 `;
 
-const OptionsContainer = styled.div`
-    margin-top: 10px;
-`;
-
-const OptionButton = styled(Button)`
-    display: block;
-    margin-top: 5px;
-`;
-
 const FormContainer = styled.div`
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
     margin-left: 2%;
+    width: 100%
 `;
 
 const BookClubSection = styled.div `
@@ -36,18 +27,13 @@ const BookClubSection = styled.div `
 
 
     const BookClubApply = () => {
-
-            const [showOptions, setShowOptions] = useState(false);
+            
             const [selectedOption, setSelectedOption] = useState('');
           
-            const toggleOptions = () => {
-              setShowOptions(!showOptions);
-            };
-          
-            const handleOptionClick = (option) => {
-              setSelectedOption(option);
-              setShowOptions(false);
-            };
+    
+            const handleOptionChange = (event) => {
+                setSelectedOption(event.target.value);
+              };
 
             return (
             <ApplicationDiv>
@@ -56,25 +42,32 @@ const BookClubSection = styled.div `
 
                 <form>
                     <FormContainer>
+                        <label>Förnamn:
                         <input type="text" id="name" name="name" placeholder=" Ditt Namn " style={{marginLeft: "2%", marginBottom:"1%",width: "30%" }}/>
+                        </label>
+                        <label>Efternamn:
+                        <input type="text" id="name" name="name" placeholder=" Ditt Namn " style={{marginLeft: "2%", marginBottom:"1%",width: "30%" }}/>
+                        </label>
+                        <label>Email:
                         <input type="email" id="email" name="email" placeholder=" Din Email " style={{marginLeft: "2%",marginBottom:"1%", width: "30%" }}/>
-                        <input type="number" id="number-of-kids" placeholder=" Antal Barn" style={{marginLeft: "2%",marginBottom:"1%", width: "30%" }}/>
-                        <input type="text" id="name-kids" name="name-kids" placeholder=" Barn/Barnens namn (frivilligt) " style={{marginLeft: "2%",marginBottom:"1%", width: "30%" }}/>
+                        </label> 
+                        <label>Barnets namn:
+                        <input type="text" id="name-kids" name="name-kids" placeholder=" Barnets namn (frivilligt) " style={{marginLeft: "2%",marginBottom:"1%", width: "30%" }}/>
+                        </label>
                     </FormContainer>
 
                     <div>
-                        <p>Välj bokformatet som passar dig bäst:</p>
-          <Button onClick={toggleOptions}>Välj ett alternativ</Button>
-          {showOptions && (
-            <OptionsContainer>
-              <OptionButton variant="secondary" onClick={() => handleOptionClick('Orginal format (Inbunden)')}>Orginal formt (Inbunden)</OptionButton>
-              <OptionButton variant="secondary" onClick={() => handleOptionClick('Blindskrift')}>Blindskrift</OptionButton>
-              <OptionButton variant="secondary" onClick={() => handleOptionClick('Ljudbok')}>Ljudbok</OptionButton>
-              <OptionButton variant="secondary" onClick={() => handleOptionClick('Förstorad text')}>Förstorad text</OptionButton>
-            </OptionsContainer>
-          )}
-          {selectedOption && <p>Valt alternativ: {selectedOption}</p>}
-        </div>
+                        
+                        <select value={selectedOption} onChange={handleOptionChange}>
+                            <option value="">Välj bokformat</option>
+                            <option value="Orginal format (Inbunden)">Orginal format (Inbunden)</option>
+                            <option value="Blindskrift">Blindskrift</option>
+                            <option value="Ljudbok">Ljudbok</option>
+                            <option value="Förstorad text">Förstorad text</option>
+                        </select>
+                        {selectedOption && <p>Valt alternativ: {selectedOption}</p>}
+                        
+                    </div>
 
                     <div>
                     <p>Har barnet i frågan någon form av funktionsnedsättning,<br></br>  som vi behöver ta hänsyn till?</p> 
