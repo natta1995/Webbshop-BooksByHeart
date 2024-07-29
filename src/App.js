@@ -12,6 +12,7 @@ import { CartProvider } from "./cartContext";
 
 
 
+
 function App() {
   return (
     <CartProvider>
