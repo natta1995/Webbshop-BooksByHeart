@@ -22,7 +22,11 @@ const FormContainer = styled.div`
 `;
 
 const BookClubSection = styled.div `
-    margin: 5%
+    margin: 5%;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    background-color: white;
 `
 
 const RadioButton = styled.input`
@@ -37,6 +41,19 @@ const BookClubLabel = styled.label`
     font-size: 18px;
 `;
 
+const BookClubInfo = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 20px;
+    flex: 1;
+`;
+
+const RadioButtonContainer = styled.div`
+    display: flex;
+    align-items: center;
+    margin-left: 10%;
+`;
 
     const BookClubApply = () => {
             
@@ -96,50 +113,68 @@ const BookClubLabel = styled.label`
  
                     <textarea id="message" placeholder="Skriv ditt svar här..." name="message" rows="5" style={{marginLeft: "2%", width: "60%"}}/>
                 </div>
+
+                <h6>Vilka Bokklubb vill du anmäla dig och ditt barn till?</h6>
+
+               
                 <BookClubSection>
-                    <img src={img1} alt="babyreading" style={{ width: "20%", marginLeft: "20px" }}/>
-                    <BookClubLabel>
-                        <RadioButton 
-                            type="radio" 
-                            name="book-club" 
-                            value="Nyckelpigorna" 
-                            checked={selectedClub === 'Nyckelpigorna'} 
-                            onChange={handleClubChange} 
-                        />
-                        Nyckelpigorna
-                    </BookClubLabel>
-                </BookClubSection>
+    <img src={img1} alt="babyreading" style={{ width: "20%" }}/>
+    <BookClubInfo>
+        <strong>Nyckelpigorna</strong>
+        <p>För barn 0-3 år.</p>
+        <p>Innehåll: I paket ingår två böcker i månaden. Med varannan bok tillkommer en leksak föreställande en av karaktärerna i boken. En välkomstgåva tillkommer också.</p>
+        <p>Pris: 399:-</p>
+    </BookClubInfo>
+    <RadioButtonContainer>
+        <RadioButton 
+            type="radio" 
+            name="book-club" 
+            value="Nyckelpigorna" 
+            checked={selectedClub === 'Nyckelpigorna'} 
+            onChange={handleClubChange} 
+        />
+    </RadioButtonContainer>
+</BookClubSection>
 
-                <BookClubSection>
-                    <img src={img2} alt="babyreading" style={{ width: "20%", marginLeft: "20px" }}/>
-                    <BookClubLabel>
-                        <RadioButton 
-                            type="radio" 
-                            name="book-club" 
-                            value="Björnarna" 
-                            checked={selectedClub === 'Björnarna'} 
-                            onChange={handleClubChange} 
-                        />
-                        Björnarna
-                    </BookClubLabel>
-                </BookClubSection>
+<BookClubSection>
+    <img src={img2} alt="babyreading" style={{ width: "20%" }}/>
+    <BookClubInfo>
+        <strong>Björnarna</strong>
+        <p>För barn 4-6 år.</p>
+        <p>Innehåll: I paket ingår två böcker i månaden. Med varannan bok tillkommer en leksak föreställande en av karaktärerna i boken. En välkomstgåva tillkommer också. </p>
+        <p>Pris: 499:-</p>
+    </BookClubInfo>
+    <RadioButtonContainer>
+        <RadioButton 
+            type="radio" 
+            name="book-club" 
+            value="Björnarna" 
+            checked={selectedClub === 'Björnarna'} 
+            onChange={handleClubChange} 
+        />
+    </RadioButtonContainer>
+</BookClubSection>
 
-                <BookClubSection>
-                    <img src={img3} alt="babyreading" style={{ width: "20%", marginLeft: "20px" }}/>
-                    <BookClubLabel>
-                        <RadioButton 
-                            type="radio" 
-                            name="book-club" 
-                            value="Fåglarna" 
-                            checked={selectedClub === 'Fåglarna'} 
-                            onChange={handleClubChange} 
-                        />
-                        Fåglarna
-                    </BookClubLabel>
-                </BookClubSection> 
+<BookClubSection>
+    <img src={img3} alt="babyreading" style={{ width: "20%" }}/>
+    <BookClubInfo>
+        <strong>Fåglarna</strong>
+        <p>För barn 7-9 år.</p>
+        <p>Innehåll: I paket ingår två böcker i månaden. Med varannan bok tillkommer en leksak föreställande en av karaktärerna i boken. En välkomstgåva tillkommer också. </p>
+        <p>Pris: 599:-</p>
+    </BookClubInfo>
+    <RadioButtonContainer>
+        <RadioButton 
+            type="radio" 
+            name="book-club" 
+            value="Fåglarna" 
+            checked={selectedClub === 'Fåglarna'} 
+            onChange={handleClubChange} 
+        />
+    </RadioButtonContainer>
+</BookClubSection>
 
-                    <p>Vilka Bokklubb vill du anmäla dig och ditt barn till?</p>
-
+             
 
                     <button>Skicka ansökan</button>
 
