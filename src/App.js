@@ -12,22 +12,21 @@ import { CartProvider } from "./cartContext";
 
 
 
-
 function App() {
   return (
     <CartProvider>
-    <Router>
+      <Router>
        <Navbar />
-      <Routes>
-        <Route path="/" element={<HomePage/>} />
-        <Route path="/products" element={<ProductPage/>} />
-        <Route path="/product/:id" element={<ProductDetailPage />} />
-        <Route path="/contact" element={<ContactPage/>} />
-        <Route path="/bookclub" element={<BookClub/>} />
-        <Route path="/bookclub/apply" element={<BookClubApply />} />
-      </Routes>
-      <Footer />
-    </Router>
+        <Routes>
+          <Route path="/" element={<HomePage/>} />
+          <Route path="/products" element={<ProductPage/>} />
+          <Route path="/product/:id" element={<ProductDetailPage />} />
+          <Route path="/contact" element={<ContactPage/>} />
+          <Route path="/bookclub" element={<BookClub/>} />
+          <Route path="/bookclub/apply" element={<BookClubApply />} />
+        </Routes>
+        <Footer />
+      </Router>
     </CartProvider>
   );
 }
