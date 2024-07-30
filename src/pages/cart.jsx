@@ -8,7 +8,6 @@ const CartContainer = styled.div`
   top: 0;
   right: 0;
   width: 30%;
-  height: flex;
   background-color: white;
   box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
   padding: 20px;
@@ -25,7 +24,6 @@ const ButtonContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  
 `;
 
 const CancelButtonContainer = styled.div`
@@ -40,7 +38,6 @@ const TotalAmount = styled.div`
   font-weight: bold;
 `;
 
-
 const Cart = () => {
   const { cart, dispatch } = useCart();
 
@@ -49,11 +46,11 @@ const Cart = () => {
   };
 
   const exitButton = () => {
-    window.location.reload()
-  }
+    window.location.reload();
+  };
 
   const calculateTotal = () => {
-    return cart.reduce((total, product) => total + parseFloat(product.cost), 0).toFixed(2);
+    return cart.reduce((total, product) => total + parseFloat(product.cost) * product.quantity, 0).toFixed(2);
   };
 
   return (
@@ -64,29 +61,28 @@ const Cart = () => {
       ) : (
         cart.map(product => (
           <CartItem key={product.id}>
-            <span>{product.name} {product.cost}</span>
-            <Button variant="danger" size="sm" onClick={() => removeFromCart(product)}>X
-            </Button>
+            <span>{product.name} ({product.quantity} st) - {(parseFloat(product.cost) * product.quantity).toFixed(2)} kr</span>
+            <Button variant="danger" size="sm" onClick={() => removeFromCart(product)}>X</Button>
           </CartItem>
         ))
       )}
       {cart.length > 0 && (
         <>
-            <TotalAmount>
+          <TotalAmount>
             <span>Totalbelopp:</span>
             <span>{calculateTotal()} kr</span>
           </TotalAmount>
-      <ButtonContainer>
-        <Button style={{backgroundColor: "green", borderColor: "green"}} variant="primary" onClick={() => dispatch({ type: 'CLEAR_CART' })}>Slutför köp</Button>
-      </ButtonContainer>
-      </>
+          <ButtonContainer>
+            <Button style={{ backgroundColor: "green", borderColor: "green" }} variant="primary" onClick={() => dispatch({ type: 'CLEAR_CART' })}>Slutför köp</Button>
+          </ButtonContainer>
+        </>
       )}
       <CancelButtonContainer>
-      <Button onClick={exitButton}>Avbryt</Button>
+        <Button onClick={exitButton}>Avbryt</Button>
       </CancelButtonContainer>
     </CartContainer>
-  
   );
 };
 
 export default Cart;
+

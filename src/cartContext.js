@@ -5,11 +5,26 @@ const CartContext = createContext();
 const cartReducer = (state, action) => {
   switch (action.type) {
     case 'ADD_TO_CART':
-      return [...state, action.payload];
+      const existingProduct = state.find(item => item.id === action.payload.id);
+      if (existingProduct) {
+        return state.map(item =>
+          item.id === action.payload.id
+            ? { ...item, quantity: item.quantity + 1 }
+            : item
+        );
+      }
+      return [...state, { ...action.payload, quantity: 1 }];
+      
     case 'REMOVE_FROM_CART':
-      return state.filter(item => item.id !== action.payload.id);
+      return state.map(item =>
+        item.id === action.payload.id
+          ? { ...item, quantity: item.quantity - 1 }
+          : item
+      ).filter(item => item.quantity > 0);
+
     case 'CLEAR_CART':
       return [];
+      
     default:
       return state;
   }
@@ -26,3 +41,4 @@ export const CartProvider = ({ children }) => {
 };
 
 export const useCart = () => useContext(CartContext);
+
