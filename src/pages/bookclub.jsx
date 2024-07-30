@@ -1,7 +1,5 @@
+import bookClubs from "../bookclubs";
 import { Link } from "react-router-dom";
-import img1 from "../img/reading smallest.jpg"
-import img2 from "../img/readingkid.jpg"
-import img3 from "../img/flera barn.jpg"
 
 
 
@@ -13,41 +11,20 @@ const BookClub = () => {
                 <h6 style={{fontFamily: "cursive"}} >Alla våra bokklubbar finns inte här ännu, hittar du inget som passar dig just nu så kommer fler att dyka upp under hösten. <br></br> Du kan alltid skicka ett meddelande till oss under kontakter, för mer information eller önskemål.</h6>
             </div>
 
-            <div style={{ display: "flex", alignItems: "center", marginBottom: "20px", backgroundColor:"#f0f0f0", padding: "1%" }}>
-                <img src={img1} alt="babyreading" style={{ width: "40%", marginLeft: "20px" }}/>
-                <div style={{ flex: 1, marginLeft: "5%",  }}>
-                    <h4>Nykelpigorna - Babygruppen</h4>
-                    <p>Rekommenderad ålder: 0-3 år</p>
-                    <p>Pris: 399:-</p>
-                    <h6>Beskrivning: </h6>
-                    <p>Varannan tisdag kommer en ny bok i posten. Du kan när som helst välja att avsluta ditt medlemskap hos oss.</p>
-                    <Link to={"/bookclub/apply"}> Anmäl intresse </Link>
-                </div>
+            <ul style={{ listStyleType: "none", padding: 0 }}>
+        {bookClubs.map(club => (
+          <li key={club.id} style={{ display: "flex", alignItems: "center", marginBottom: "20px", backgroundColor: "#f0f0f0", padding: "1%" }}>
+            <img src={club.image} alt={club.name} style={{ width: "40%", marginLeft: "20px" }} />
+            <div style={{ flex: 1, marginLeft: "5%" }}>
+              <h2>{club.name}</h2>
+              <p>{club.age}</p>
+              <p>{club.des}</p>
+              <Link to={"/bookclub/apply"}> Anmäl intresse </Link>
             </div>
-    
-            <div style={{ display: "flex", alignItems: "center", marginBottom: "20px", backgroundColor:"#f0f0f0", padding: "1%" }}>
-                <img src={img2} alt="babyreading" style={{ width: "40%", marginLeft: "20px" }}/>
-                <div style={{ flex: 1, marginLeft: "5%" }}>
-                    <h4>Björnarna - Nybörjarna</h4>
-                    <p>Rekommenderad ålder: 4-8 år</p>
-                    <p>Pris: 499:-</p>
-                    <h6>Beskrivning: </h6>
-                    <p>Varannan onsdag kommer en ny bok i posten. Du kan när som helst välja att avsluta ditt medlemskap hos oss.</p>
-                    <Link to={"/bookclub/apply"}> Anmäl intresse </Link>
-                </div>
-            </div>
-    
-            <div style={{ display: "flex", alignItems: "center", marginBottom: "20px" , backgroundColor:"#f0f0f0", padding: "1%"}}>
-                <img src={img3} alt="babyreading" style={{ width: "40%", marginLeft: "20px" }}/>
-                <div style={{ flex: 1, marginLeft: "5%"  }}>
-                    <h4>Fåglarna - Flerbarnsgänget</h4>
-                    <p>Rekommenderad ålder: 0 - 12 år</p>
-                    <p>Pris: 599:-</p>
-                    <h6>Beskrivning: </h6>
-                    <p>Varannan torsdag kommer en ny bok i posten. Du kan när som helst välja att avsluta ditt medlemskap hos oss.</p>
-                    <Link to={"/bookclub/apply"}> Anmäl intresse </Link>
-                </div>
-            </div>
+          </li>
+        ))}
+      </ul>
+
         </>
         )
     }
