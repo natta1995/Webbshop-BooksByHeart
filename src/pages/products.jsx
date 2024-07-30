@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "react-router-dom";
-import products from "../database"
+import products from "../books"
 import {Button} from "react-bootstrap"
 
 const ProductPage = () => { 

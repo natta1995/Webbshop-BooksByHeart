@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { getProductById } from "../database";
+import { getProductById } from "../books";
 import { Button } from "react-bootstrap";
 import styled from "styled-components";
 import { useCart } from "../cartContext";
