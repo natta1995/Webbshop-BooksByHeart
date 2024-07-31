@@ -77,16 +77,16 @@ const RadioButtonContainer = styled.div`
                 <form>
                     <FormContainer>
                         <label>Förnamn:
-                        <input type="text" id="name" name="name" placeholder=" Ditt Namn " style={{marginLeft: "2%", marginBottom:"1%",width: "30%" }}/>
+                        <input type="text" id="name" name="name" placeholder=" Förnamn " style={{marginLeft: "2%", marginBottom:"1%",width: "30%" }}/>
                         </label>
                         <label>Efternamn:
-                        <input type="text" id="name" name="name" placeholder=" Ditt Namn " style={{marginLeft: "2%", marginBottom:"1%",width: "30%" }}/>
+                        <input type="text" id="name" name="name" placeholder=" Efternamn " style={{marginLeft: "2%", marginBottom:"1%",width: "30%" }}/>
                         </label>
                         <label>Email:
-                        <input type="email" id="email" name="email" placeholder=" Din Email " style={{marginLeft: "2%",marginBottom:"1%", width: "30%" }}/>
+                        <input type="email" id="email" name="email" placeholder=" Email " style={{marginLeft: "2%",marginBottom:"1%", width: "30%" }}/>
                         </label> 
                         <label>Barnets namn:
-                        <input type="text" id="name-kids" name="name-kids" placeholder=" Barnets namn (frivilligt) " style={{marginLeft: "2%",marginBottom:"1%", width: "30%" }}/>
+                        <input type="text" id="name-kids" name="name-kids" placeholder=" Barnets namn " style={{marginLeft: "2%",marginBottom:"1%", width: "30%" }}/>
                         </label>
                     </FormContainer>
 

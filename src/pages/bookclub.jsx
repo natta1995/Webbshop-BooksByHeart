@@ -17,7 +17,7 @@ const BookClub = () => {
             <img src={club.image} alt={club.name} style={{ width: "40%", marginLeft: "20px" }} />
             <div style={{ flex: 1, marginLeft: "5%" }}>
               <h2>{club.name}</h2>
-              <p>{club.age}</p>
+              <p>Rekommenderad ålder: {club.age}</p>
               <p>{club.des}</p>
               <Link to={"/bookclub/apply"}> Anmäl intresse </Link>
             </div>
