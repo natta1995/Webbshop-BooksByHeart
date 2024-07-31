@@ -6,6 +6,7 @@ import img5 from "../src/img/girlanddog.jpg"
 import img6 from "../src/img/rabbit.jpg"
 import img7 from "../src/img/sleepy.jpg"
 import img8 from "../src/img/raccoon-garbage.webp"
+import img9 from "../src/img/hijabgirl.webp"
 
 
 const products = [
@@ -86,8 +87,19 @@ const products = [
       cost: "119:-",
       age: "4-6 år",
       by: "Magnus Ravsk",
-      sort: "inbunden",
+      sort: "Inbunden",
       des: "Tvättbörnen Jens hatar att bada, han hatar att bada så mycket att han gör allt för att slippa."
+      },
+      {
+        id: 9,
+        name: "Misras första hijab",
+        image: img9,
+        cost: "179:-",
+        age: "8-12 år",
+        by: "Amina Gafur",
+        sort: "Inbunden",
+        des: "Dagen är här, dagen Misra längtat efter sedan hon var liten. Idag skall kon få sin första egna hijab."
+
       }
   
     ];
