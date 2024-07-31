@@ -1,7 +1,7 @@
 import {Link} from "react-router-dom"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Form, Button, FormControl, InputGroup,  Navbar as BootstrapNavbar, Nav, Container, Dropdown } from "react-bootstrap";
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom"
 import styled from "styled-components";
 import booksData from "./books"
@@ -17,7 +17,10 @@ function Navbar() {
     const [filteredBooks, setFilteredBooks] = useState([]);
     const [showCart, setShowCart] = useState(false); 
     const { cart } = useCart(); 
+
     const navigate = useNavigate();
+    const searchRef = useRef();
+
 
     const DropdownMenu = styled(Dropdown.Menu)`
     position: absolute;
@@ -92,6 +95,19 @@ function Navbar() {
       navigate(`/product/${book.id}`);
       setSearchTerm("");
     };
+
+    useEffect(() => {
+      const handleClickOutside = (event) => {
+        if (searchRef.current && !searchRef.current.contains(event.target)) {
+          setFilteredBooks([]);
+        }
+      };
+    
+      document.addEventListener("mousedown", handleClickOutside);
+      return () => {
+        document.removeEventListener("mousedown", handleClickOutside);
+      };
+    }, []);
     
 
     return (
@@ -108,7 +124,7 @@ function Navbar() {
                 <Nav.Link as={Link} to="/bookclub">Bokklubb</Nav.Link>
                 <Nav.Link as={Link} to="/bookclub/apply">Ansökan</Nav.Link>
               </Nav>
-              <Form className="d-flex" onSubmit={handleSearch}>
+              <Form className="d-flex" onSubmit={handleSearch} ref={searchRef}>
                 <InputGroup>
                   <FormControl
                     placeholder="Sök efter en bok..."
