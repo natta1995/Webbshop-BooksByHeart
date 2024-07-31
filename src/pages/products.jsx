@@ -1,13 +1,22 @@
-import React from "react"
+import React, {useState} from "react"
 import { Link } from "react-router-dom";
 import products from "../books"
 import {Button} from "react-bootstrap"
 
 const ProductPage = () => { 
-    
+  const [currentPage, setCurrentPage] = useState(1);
+  const booksPerPage = 6;
+
+  const indexOfLastBook = currentPage * booksPerPage;
+  const indexOfFirstBook = indexOfLastBook - booksPerPage;
+  const currentBooks = products.slice(indexOfFirstBook, indexOfLastBook);
+
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
     return (
+      <>
       <div style={{ marginTop: "100px", display: "flex", flexWrap: "wrap", justifyContent: "center"}}>
-        {products.map((product) => (
+        {currentBooks.map((product) => (
           <Link to={`/product/${product.id}`} key={product.id} style={{ textDecoration: "none", color: "inherit",  width: "400px", margin: "10px" }}>
             <div style={{ position: "relative", width: "320px", height: "400px", margin: "10px", padding: "0px", textAlign: "center" }}>
             <img src={product.image} alt={product.name} style={{ width: "300px", height: "400px", marginBottom: "10px", border: "3px solid black" }} />
@@ -25,6 +34,15 @@ const ProductPage = () => {
         ))}
           
       </div>
+      <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
+        {currentPage > 1 && (
+          <button onClick={() => paginate(currentPage - 1)} style={{ marginRight: '10px' }}>Föregående</button>
+        )}
+        {indexOfLastBook < products.length && (
+          <button onClick={() => paginate(currentPage + 1)}>Nästa</button>
+        )}
+      </div>
+      </>
     );
   }
 
