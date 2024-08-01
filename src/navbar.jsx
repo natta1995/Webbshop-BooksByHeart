@@ -96,18 +96,7 @@ function Navbar() {
       setSearchTerm("");
     };
 
-    useEffect(() => {
-      const handleClickOutside = (event) => {
-        if (searchRef.current && !searchRef.current.contains(event.target)) {
-          setFilteredBooks([]);
-        }
-      };
-    
-      document.addEventListener("mousedown", handleClickOutside);
-      return () => {
-        document.removeEventListener("mousedown", handleClickOutside);
-      };
-    }, []);
+
     
 
     return (
