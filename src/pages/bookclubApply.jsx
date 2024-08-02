@@ -129,7 +129,7 @@ const RadioButtonContainer = styled.div`
                             <img src={club.image} alt={club.name} style={{ width: "40%", marginLeft: "20px", borderRadius: "5px" }}/>
                         <BookClubInfo>
                             <strong>{club.name}</strong>
-                            <p>Rekommenderad ålder: {club.age}</p>
+                            <p>Rek. ålder: {club.age}</p>
                             <p>{club.price}</p>
                         </BookClubInfo>
                         <RadioButtonContainer>
