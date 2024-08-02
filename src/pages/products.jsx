@@ -7,6 +7,8 @@ const ProductPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const booksPerPage = 6;
 
+  const totalPages = Math.ceil(products.length / booksPerPage);
+
   const indexOfLastBook = currentPage * booksPerPage;
   const indexOfFirstBook = indexOfLastBook - booksPerPage;
   const currentBooks = products.slice(indexOfFirstBook, indexOfLastBook);
@@ -34,7 +36,10 @@ const ProductPage = () => {
         ))}
           
       </div>
-      <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
+      <div style={{ display: 'flex', justifyContent: 'right', marginTop: '20px', paddingRight: "10%" }}>
+      <span style={{ marginRight: '10px' }}>
+          Sida {currentPage} av {totalPages}
+        </span>
         {currentPage > 1 && (
           <button onClick={() => paginate(currentPage - 1)} style={{ marginRight: '10px' }}>Föregående</button>
         )}
