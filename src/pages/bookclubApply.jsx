@@ -3,6 +3,7 @@ import img1 from "../img/reading smallest.jpg"
 import img2 from "../img/readingkid.jpg"
 import img3 from "../img/flera barn.jpg"
 import styled from 'styled-components';
+import bookclubs from '../bookclubs'
 
 
 const ApplicationDiv = styled.div `
@@ -37,6 +38,8 @@ const BookClubSection = styled.div `
     align-items: center;
     text-align: left;
     background-color: white;
+    padding: 2%;
+    border-radius: 5px
 `
 
 const RadioButton = styled.input`
@@ -64,19 +67,23 @@ const RadioButtonContainer = styled.div`
             
             const [selectedOption, setSelectedOption] = useState('');
             const [selectedClub, setSelectedClub] = useState('');
-          
-    
+
+         
+
             const handleOptionChange = (event) => {
                 setSelectedOption(event.target.value);
               };
 
               const handleClubChange = (event) => {
                 setSelectedClub(event.target.value);
+                const selectedValue = event.target.value;
+                console.log("Valt klubb-ID:", selectedValue);
+                console.log("hej")
             };
 
             return (
             <ApplicationDiv>
-                <h1>Ansökan om medlemskap</h1>
+                <h1 style={{marginBottom: "3%"}}>Ansökan om medlemskap</h1>
                 <p>(Observera att åldrarna till de olika bokklubbarna endast är en generall rekomendation, och inget krav.)</p>
 
                 <form>
@@ -106,75 +113,38 @@ const RadioButtonContainer = styled.div`
                 
             <div>
                 <p>Har barnet i frågan någon form av funktionsnedsättning,<br></br>  som vi behöver ta hänsyn till?</p> 
-                <textarea id="message" placeholder="Skriv ditt svar här..." name="message" rows="5" style={{marginLeft: "2%", width: "60%"}}/>
+                <textarea id="message" placeholder="Skriv ditt svar här..." name="message" rows="5" style={{marginLeft: "2%", width: "70%"}}/>
             </div>
 
             <div>
                 <p>Finns det något annat som vi bör känna till?</p> 
-                <textarea id="message" placeholder="Skriv ditt svar här..." name="message" rows="5" style={{marginLeft: "2%", width: "60%"}}/>
+                <textarea id="message" placeholder="Skriv ditt svar här..." name="message" rows="5" style={{marginLeft: "2%", width: "70%"}}/>
             </div>
 
                 <h5 style={{marginTop: "5%"}}>Vilka Bokklubb vill du anmäla dig och ditt barn till?</h5>
 
-               
-                <BookClubSection>
-    <img src={img1} alt="babyreading" style={{ width: "20%" }}/>
-    <BookClubInfo>
-        <strong>Nyckelpigorna</strong>
-        <p>För barn 0-3 år.</p>
-        <p>Innehåll: I paket ingår två böcker i månaden. Med varannan bok tillkommer en leksak föreställande en av karaktärerna i boken. En välkomstgåva tillkommer också.</p>
-        <p>Pris: 399:-</p>
-    </BookClubInfo>
-    <RadioButtonContainer>
-        <RadioButton 
-            type="radio" 
-            name="book-club" 
-            value="Nyckelpigorna" 
-            checked={selectedClub === 'Nyckelpigorna'} 
-            onChange={handleClubChange} 
-        />
-    </RadioButtonContainer>
-</BookClubSection>
+                <div>
+                    {bookclubs.map(club => (
+                        <BookClubSection key={club.id}>
+                            <img src={club.image} alt={club.name} style={{ width: "40%", marginLeft: "20px", borderRadius: "5px" }}/>
+                        <BookClubInfo>
+                            <strong>{club.name}</strong>
+                            <p>Rekommenderad ålder: {club.age}</p>
+                            <p>{club.price}</p>
+                        </BookClubInfo>
+                        <RadioButtonContainer>
+                        <RadioButton 
+                            type="radio" 
+                            name="book-club" 
+                            value= {club.id} 
+                            checked={selectedClub === String(club.id)}
 
-<BookClubSection>
-    <img src={img2} alt="babyreading" style={{ width: "20%" }}/>
-    <BookClubInfo>
-        <strong>Björnarna</strong>
-        <p>För barn 4-6 år.</p>
-        <p>Innehåll: I paket ingår två böcker i månaden. Med varannan bok tillkommer en leksak föreställande en av karaktärerna i boken. En välkomstgåva tillkommer också. </p>
-        <p>Pris: 499:-</p>
-    </BookClubInfo>
-    <RadioButtonContainer>
-        <RadioButton 
-            type="radio" 
-            name="book-club" 
-            value="Björnarna" 
-            checked={selectedClub === 'Björnarna'} 
-            onChange={handleClubChange} 
-        />
-    </RadioButtonContainer>
-</BookClubSection>
-
-<BookClubSection>
-    <img src={img3} alt="babyreading" style={{ width: "20%" }}/>
-    <BookClubInfo>
-        <strong>Fåglarna</strong>
-        <p>För barn 7-9 år.</p>
-        <p>Innehåll: I paket ingår två böcker i månaden. Med varannan bok tillkommer en leksak föreställande en av karaktärerna i boken. En välkomstgåva tillkommer också. </p>
-        <p>Pris: 599:-</p>
-    </BookClubInfo>
-    <RadioButtonContainer>
-        <RadioButton 
-            type="radio" 
-            name="book-club" 
-            value="Fåglarna" 
-            checked={selectedClub === 'Fåglarna'} 
-            onChange={handleClubChange} 
-        />
-    </RadioButtonContainer>
-</BookClubSection>
-
-             
+                            onChange={handleClubChange} 
+                        />
+                        </RadioButtonContainer>
+                        </BookClubSection>
+                    ))}
+                </div>
 
                     <button>Skicka ansökan</button>
 
