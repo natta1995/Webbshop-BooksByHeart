@@ -17,9 +17,9 @@ const FormContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-left: 2%;
+    margin-left: 22%;
     margin-top: 3%;
-    width: 100%
+    width: 100%;
 `;
 
 const Label = styled.label`
@@ -27,7 +27,7 @@ const Label = styled.label`
   flex-direction: column;
   align-items: flex-start;
   margin-left: 5%;
-  margin-bottom: 1%; 
+   
   width: 100%;
 `;
 
@@ -93,39 +93,28 @@ const RadioButtonContainer = styled.div`
                         <Label>Barnets namn:
                         <input type="text" id="name-kids" name="name-kids" placeholder=" Barnets namn " style={{marginLeft: "2%",marginBottom:"1%", width: "40%" }}/>
                         </Label>
-                        
-                        <div>
-                        
-                        <Label> Välj bokformat:
-                        <select value={selectedOption} onChange={handleOptionChange}>
-                            <option value="">Välj</option>
+                        <Label> Välj boktyp:
+                        <select style={{marginLeft: "2%", width: "40%", marginBottom: "5%"}} value={selectedOption} onChange={handleOptionChange}>
                             <option value="Orginal format (Inbunden)">Orginal format (Inbunden)</option>
                             <option value="Blindskrift">Blindskrift</option>
                             <option value="Ljudbok">Ljudbok</option>
                             <option value="Förstorad text">Förstorad text</option>
                         </select>
                         </Label>
-                        {selectedOption && <p>Valt alternativ: {selectedOption}</p>}
-                        
-                    </div>
-                    
-                    
                     </FormContainer>
 
                 
+            <div>
+                <p>Har barnet i frågan någon form av funktionsnedsättning,<br></br>  som vi behöver ta hänsyn till?</p> 
+                <textarea id="message" placeholder="Skriv ditt svar här..." name="message" rows="5" style={{marginLeft: "2%", width: "60%"}}/>
+            </div>
 
-                    <div>
-                    <p>Har barnet i frågan någon form av funktionsnedsättning,<br></br>  som vi behöver ta hänsyn till?</p> 
- 
-                    <textarea id="message" placeholder="Skriv ditt svar här..." name="message" rows="5" style={{marginLeft: "2%", width: "60%"}}/>
-                </div>
-                <div>
-                    <p>Finns det något annat som vi bör känna till?</p> 
- 
-                    <textarea id="message" placeholder="Skriv ditt svar här..." name="message" rows="5" style={{marginLeft: "2%", width: "60%"}}/>
-                </div>
+            <div>
+                <p>Finns det något annat som vi bör känna till?</p> 
+                <textarea id="message" placeholder="Skriv ditt svar här..." name="message" rows="5" style={{marginLeft: "2%", width: "60%"}}/>
+            </div>
 
-                <h6>Vilka Bokklubb vill du anmäla dig och ditt barn till?</h6>
+                <h5 style={{marginTop: "5%"}}>Vilka Bokklubb vill du anmäla dig och ditt barn till?</h5>
 
                
                 <BookClubSection>
