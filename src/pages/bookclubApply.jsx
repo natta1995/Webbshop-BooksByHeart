@@ -1,7 +1,4 @@
 import { useState } from 'react'; 
-import img1 from "../img/reading smallest.jpg"
-import img2 from "../img/readingkid.jpg"
-import img3 from "../img/flera barn.jpg"
 import styled from 'styled-components';
 import bookclubs from '../bookclubs'
 
