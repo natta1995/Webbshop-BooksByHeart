@@ -16,9 +16,19 @@ const ApplicationDiv = styled.div `
 const FormContainer = styled.div`
     display: flex;
     flex-direction: column;
-    align-items: left;
+    align-items: flex-start;
     margin-left: 2%;
+    margin-top: 3%;
     width: 100%
+`;
+
+const Label = styled.label`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 5%;
+  margin-bottom: 1%; 
+  width: 100%;
 `;
 
 const BookClubSection = styled.div `
@@ -35,11 +45,6 @@ const RadioButton = styled.input`
     margin-right: 10px;
 `;
 
-const BookClubLabel = styled.label`
-    display: flex;
-    align-items: center;
-    font-size: 18px;
-`;
 
 const BookClubInfo = styled.div`
     display: flex;
@@ -76,32 +81,38 @@ const RadioButtonContainer = styled.div`
 
                 <form>
                     <FormContainer>
-                        <label>Förnamn:
-                        <input type="text" id="name" name="name" placeholder=" Förnamn " style={{marginLeft: "2%", marginBottom:"1%",width: "30%" }}/>
-                        </label>
-                        <label>Efternamn:
-                        <input type="text" id="name" name="name" placeholder=" Efternamn " style={{marginLeft: "2%", marginBottom:"1%",width: "30%" }}/>
-                        </label>
-                        <label>Email:
-                        <input type="email" id="email" name="email" placeholder=" Email " style={{marginLeft: "2%",marginBottom:"1%", width: "30%" }}/>
-                        </label> 
-                        <label>Barnets namn:
-                        <input type="text" id="name-kids" name="name-kids" placeholder=" Barnets namn " style={{marginLeft: "2%",marginBottom:"1%", width: "30%" }}/>
-                        </label>
-                    </FormContainer>
-
-                    <div>
+                        <Label>Förnamn:
+                        <input type="text" id="name" name="name" placeholder=" Förnamn " style={{marginLeft: "2%", marginBottom:"1%",width: "40%" }}/>
+                        </Label>
+                        <Label>Efternamn:
+                        <input type="text" id="name" name="name" placeholder=" Efternamn " style={{marginLeft: "2%", marginBottom:"1%",width: "40%" }}/>
+                        </Label>
+                        <Label>Email:
+                        <input type="email" id="email" name="email" placeholder=" Email " style={{marginLeft: "2%",marginBottom:"1%", width: "40%" }}/>
+                        </Label> 
+                        <Label>Barnets namn:
+                        <input type="text" id="name-kids" name="name-kids" placeholder=" Barnets namn " style={{marginLeft: "2%",marginBottom:"1%", width: "40%" }}/>
+                        </Label>
                         
+                        <div>
+                        
+                        <Label> Välj bokformat:
                         <select value={selectedOption} onChange={handleOptionChange}>
-                            <option value="">Välj bokformat</option>
+                            <option value="">Välj</option>
                             <option value="Orginal format (Inbunden)">Orginal format (Inbunden)</option>
                             <option value="Blindskrift">Blindskrift</option>
                             <option value="Ljudbok">Ljudbok</option>
                             <option value="Förstorad text">Förstorad text</option>
                         </select>
+                        </Label>
                         {selectedOption && <p>Valt alternativ: {selectedOption}</p>}
                         
                     </div>
+                    
+                    
+                    </FormContainer>
+
+                
 
                     <div>
                     <p>Har barnet i frågan någon form av funktionsnedsättning,<br></br>  som vi behöver ta hänsyn till?</p> 
