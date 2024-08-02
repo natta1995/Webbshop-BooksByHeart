@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/Webbshop-BooksByHeart/static/css/main.ff02f4b5.css",
+    "main.js": "/Webbshop-BooksByHeart/static/js/main.c4d2023b.js",
+    "static/js/488.2e80d6f2.chunk.js": "/Webbshop-BooksByHeart/static/js/488.2e80d6f2.chunk.js",
+    "static/media/starter.jpg": "/Webbshop-BooksByHeart/static/media/starter.4c382b4764bea7cffc32.jpg",
+    "static/media/girlanddog.jpg": "/Webbshop-BooksByHeart/static/media/girlanddog.6aeb2465caa8f1447a07.jpg",
+    "static/media/rabbit.jpg": "/Webbshop-BooksByHeart/static/media/rabbit.5477ce6b0ad36a36b12b.jpg",
+    "static/media/sleepy.jpg": "/Webbshop-BooksByHeart/static/media/sleepy.b1fc16ebd9a791e4f0d1.jpg",
+    "static/media/flera barn.jpg": "/Webbshop-BooksByHeart/static/media/flera barn.b6f330e6d5470245e9fe.jpg",
+    "static/media/intervju.jpg": "/Webbshop-BooksByHeart/static/media/intervju.f11cd410ddc9a5b8100f.jpg",
+    "static/media/reading smallest.jpg": "/Webbshop-BooksByHeart/static/media/reading smallest.49411575cb67078964a6.jpg",
+    "static/media/readingkid.jpg": "/Webbshop-BooksByHeart/static/media/readingkid.34056ea801dbabab8885.jpg",
+    "static/media/babyreading.jpg": "/Webbshop-BooksByHeart/static/media/babyreading.41eab6bf97157e3a1abc.jpg",
+    "static/media/hijabgirl.webp": "/Webbshop-BooksByHeart/static/media/hijabgirl.eeecaadf5a178519e019.webp",
+    "static/media/postman.webp": "/Webbshop-BooksByHeart/static/media/postman.ff19029eac1771c9c948.webp",
+    "static/media/pumkin.jpg": "/Webbshop-BooksByHeart/static/media/pumkin.6d8c59a3b966d6d3656c.jpg",
+    "static/media/godlonly.jpg": "/Webbshop-BooksByHeart/static/media/godlonly.92c72e79299d4a7332b4.jpg",
+    "static/media/raccoon-garbage.webp": "/Webbshop-BooksByHeart/static/media/raccoon-garbage.878e604dbec42a8af20d.webp",
+    "static/media/snow.jpg": "/Webbshop-BooksByHeart/static/media/snow.8d66e793a4ebdaf2dc65.jpg",
+    "index.html": "/Webbshop-BooksByHeart/index.html",
+    "main.ff02f4b5.css.map": "/Webbshop-BooksByHeart/static/css/main.ff02f4b5.css.map",
+    "main.c4d2023b.js.map": "/Webbshop-BooksByHeart/static/js/main.c4d2023b.js.map",
+    "488.2e80d6f2.chunk.js.map": "/Webbshop-BooksByHeart/static/js/488.2e80d6f2.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ff02f4b5.css",
+    "static/js/main.c4d2023b.js"
+  ]
+}
