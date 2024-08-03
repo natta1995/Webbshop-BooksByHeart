@@ -7,7 +7,7 @@ const CartContainer = styled.div`
   position: fixed;
   top: 0;
   right: 0;
-  width: 30%;
+  width: 40%;
   background-color: white;
   box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
   padding: 20px;
@@ -61,7 +61,10 @@ const Cart = () => {
       ) : (
         cart.map(product => (
           <CartItem key={product.id}>
-            <span>{product.name} ({product.quantity} st) - {(parseFloat(product.cost) * product.quantity).toFixed(2)} kr</span>
+            <span>
+              <img src={product.image} style={{width: "20%", height: "30%"}}/>
+              {product.name} ({product.quantity} st) - {(parseFloat(product.cost) * product.quantity).toFixed(2)} kr
+              </span>
             <Button variant="danger" size="sm" onClick={() => removeFromCart(product)}>X</Button>
           </CartItem>
         ))

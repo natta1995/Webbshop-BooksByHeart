@@ -104,7 +104,7 @@ function Navbar() {
         <BootstrapNavbar bg="light" expand="lg">
           <Container>
             <BootstrapNavbar.Brand as={Link} to="/">BooksByHeart</BootstrapNavbar.Brand>
-            <BootstrapNavbar.Toggle aria-controls="basic-navbar-nav" />
+            <BootstrapNavbar.Toggle aria-controls="basic-navbar-nav" style={{marginRight: "-30%"}}/>
             <BootstrapNavbar.Collapse id="basic-navbar-nav">
               <Nav className="me-auto">
                 <Nav.Link as={Link} to="/">Hem</Nav.Link>
@@ -126,7 +126,7 @@ function Navbar() {
                   </Button>
                 </InputGroup>
                 {filteredBooks.length > 0 && (
-                  <DropdownMenu show>
+                  <DropdownMenu show >
                     {filteredBooks.map((book) => (
                       <Dropdown.Item
                         as={Link}
@@ -139,13 +139,15 @@ function Navbar() {
                       </Dropdown.Item>
                     ))}
                   </DropdownMenu>
+                  
                 )}
               </Form>
-              <CartIcon onClick={() => setShowCart(!showCart)}>
+             
+            </BootstrapNavbar.Collapse>
+            <CartIcon onClick={() => setShowCart(!showCart)}>
             <FontAwesomeIcon icon={faShoppingCart} />
             {cart.length > 0 && <span>{cart.length}</span>}
           </CartIcon>
-            </BootstrapNavbar.Collapse>
           </Container>
           {showCart && <Cart />}
         </BootstrapNavbar>
