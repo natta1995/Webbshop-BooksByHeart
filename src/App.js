@@ -16,7 +16,7 @@ function App() {
   
   return (
     <CartProvider>
-      <Router>
+      <Router basename="/Webbshop-BooksByHeart" >
        <Navbar />
         <Routes>
           <Route path="/" element={<HomePage/>} />
