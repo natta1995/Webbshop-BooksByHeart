@@ -23,14 +23,18 @@ function Navbar() {
 
 
     const DropdownMenu = styled(Dropdown.Menu)`
-    position: absolute;
-    margin-left: 67%;
-    margin-right: 0%;
-    padding: 0%;
-    width: 23%;
+      position: absolute;
+    margin-left: 0;
+    padding: 0;
+    width: 100%;
     max-height: 300px;
     overflow-y: auto;
     z-index: 1000;
+    @media (min-width: 768px) {
+        width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+    }
   `;
 
   const CartIcon = styled.div`
@@ -104,7 +108,7 @@ function Navbar() {
         <BootstrapNavbar bg="light" expand="lg">
           <Container>
             <BootstrapNavbar.Brand as={Link} to="/">BooksByHeart</BootstrapNavbar.Brand>
-            <BootstrapNavbar.Toggle aria-controls="basic-navbar-nav" style={{marginRight: "-30%"}}/>
+            <BootstrapNavbar.Toggle aria-controls="basic-navbar-nav" />
             <BootstrapNavbar.Collapse id="basic-navbar-nav">
               <Nav className="me-auto">
                 <Nav.Link as={Link} to="/">Hem</Nav.Link>
