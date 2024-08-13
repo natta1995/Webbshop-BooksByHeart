@@ -1,31 +1,84 @@
-import {useState} from "react"
+import styled from "styled-components";
+
+const Container = styled.div`
+  margin-top: 100px;
+  text-align: center;
+
+  @media (max-width: 768px) {
+    margin-top: 50px;  
+  }
+`;
+
+const Heading = styled.h1`
+  margin-bottom: 1%;
+
+  @media (max-width: 768px) {
+    font-size: 1.5rem;  
+  }
+`;
+
+const Paragraph = styled.p`
+  font-size: 1rem;
+
+  @media (max-width: 768px) {
+    font-size: 0.9rem;  
+  }
+`;
+
+const Input = styled.input`
+  margin-left: 2%;
+  margin-bottom: 1%;
+  width: 30%;
+
+  @media (max-width: 768px) {
+    width: 90%;  
+    margin-left: 5%;
+  }
+`;
+
+const Textarea = styled.textarea`
+  margin-left: 2%;
+  width: 30%;
+
+  @media (max-width: 768px) {
+    width: 90%;  
+    margin-left: 5%;
+  }
+`;
+
+const Button = styled.button`
+  margin-top: 2%;
+  padding: 0.5%;
+  width: 7%;
+
+  @media (max-width: 768px) {
+    width: 30%;  
+    padding: 1%;
+  }
+`;
 
 const ContactPage = () => {
 
 
   
     return (
-      <div style={{ marginTop: "100px", textAlign: "center" }}>
-        <h1 style={{marginBottom: "1%"}}>Vill du kontakta oss?</h1>
-        <p>Har du frågor eller vill du hjälpa oss att bli bättre? <br></br> Att skicka ett meddelande är det bästa sättet att få kontakt med oss. <br></br> Vi kommer höra av oss till dig inom 48h.</p>
+      <Container>
+        <Heading>Vill du kontakta oss?</Heading>
+        <Paragraph>Har du frågor eller vill du hjälpa oss att bli bättre? <br></br> Att skicka ett meddelande är det bästa sättet att få kontakt med oss. <br></br> Vi kommer höra av oss till dig inom 48h.</Paragraph>
         
         <form >
           <div>
-            <input type="text" id="name" name="name" placeholder=" Namn " style={{marginLeft: "2%", marginBottom:"1%",width: "30%" }}/>
+            <Input type="text" id="name" name="name" placeholder=" Namn " />
           </div>
           <div>
-          <input type="email" id="email" name="email" placeholder=" Email " style={{marginLeft: "2%",marginBottom:"1%", width: "30%" }}/>
+          <Input type="email" id="email" name="email" placeholder=" Email " />
           </div>
           <div>
-            <textarea id="message" placeholder="Skriv ditt meddelande här..." name="message" rows="8" style={{marginLeft: "2%", width: "30%"}}/>
+            <Textarea id="message" placeholder="Skriv ditt meddelande här..." name="message" rows="8" />
           </div>
-          <div style={{marginLeft: "42%"}}>
-         
-        </div>
-          <button  style={{marginTop:"2%", padding: "0.5%", width: "7%"}}>Skicka</button>
+          <Button>Skicka</Button>
         </form>
-     
-      </div>
+      </Container>
     );
   }
   export default ContactPage
