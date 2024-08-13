@@ -26,7 +26,7 @@ const HomePage = () => {
 
   const buttonContainerStyle = {
     position: 'absolute',
-    bottom: isMobile ? '10%' : '5%',
+    bottom: isMobile ? '3%' : '5%',
     right: isMobile ? '10px' : '20px',
     zIndex: 1
   };
