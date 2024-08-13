@@ -9,6 +9,10 @@ const ApplicationDiv = styled.div `
     margin-top: 7%;
     padding: 5%;
     text-align: center;
+
+    @media (max-width: 768px) {
+    margin: 0%
+  }
 `;
 
 const FormContainer = styled.div`
@@ -37,12 +41,23 @@ const BookClubSection = styled.div `
     background-color: white;
     padding: 2%;
     border-radius: 5px
+
+      @media (max-width: 768px) {
+      display: flex;
+     align-items: flex-start
+    
+  }
 `
 
 const RadioButton = styled.input`
     width: 25px;
     height: 25px;
     margin-right: 10px;
+
+      @media (max-width: 768px) {
+        margin-right: 0px;
+       
+  }
 `;
 
 
@@ -52,14 +67,34 @@ const BookClubInfo = styled.div`
     justify-content: center;
     margin-left: 20px;
     flex: 1;
+
+      @media (max-width: 768px) {
+        margin-left: 0%;
+        width: 100%
+  }
 `;
 
 const RadioButtonContainer = styled.div`
     display: flex;
     align-items: center;
     margin-left: 10%;
+
+      @media (max-width: 768px) {
+        margin-left: 0%;
+   
+  }
 `;
 
+const Input = styled.input `
+    margin-left: 2%;
+    margin-bottom: 1%;
+    width: 40%;
+
+    @media (max-width: 768px) {
+    margin-left: -8%;
+    width: 60%
+  }
+`
     const BookClubApply = () => {
             
             const [selectedOption, setSelectedOption] = useState('');
@@ -86,16 +121,16 @@ const RadioButtonContainer = styled.div`
                 <form>
                     <FormContainer>
                         <Label>Förnamn:
-                        <input type="text" id="name" name="name" placeholder=" Förnamn " style={{marginLeft: "2%", marginBottom:"1%",width: "40%" }}/>
+                        <Input type="text" id="name" name="name" placeholder=" Förnamn " />
                         </Label>
                         <Label>Efternamn:
-                        <input type="text" id="name" name="name" placeholder=" Efternamn " style={{marginLeft: "2%", marginBottom:"1%",width: "40%" }}/>
+                        <Input type="text" id="name" name="name" placeholder=" Efternamn " />
                         </Label>
                         <Label>Email:
-                        <input type="email" id="email" name="email" placeholder=" Email " style={{marginLeft: "2%",marginBottom:"1%", width: "40%" }}/>
+                        <Input type="email" id="email" name="email" placeholder=" Email " />
                         </Label> 
                         <Label>Barnets namn:
-                        <input type="text" id="name-kids" name="name-kids" placeholder=" Barnets namn " style={{marginLeft: "2%",marginBottom:"1%", width: "40%" }}/>
+                        <Input type="text" id="name-kids" name="name-kids" placeholder=" Barnets namn " />
                         </Label>
                         <Label> Välj boktyp:
                         <select style={{marginLeft: "2%", width: "40%", marginBottom: "5%"}} value={selectedOption} onChange={handleOptionChange}>
@@ -135,7 +170,6 @@ const RadioButtonContainer = styled.div`
                             name="book-club" 
                             value= {club.id} 
                             checked={selectedClub === String(club.id)}
-
                             onChange={handleClubChange} 
                         />
                         </RadioButtonContainer>
