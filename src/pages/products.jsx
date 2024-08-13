@@ -38,7 +38,7 @@ const ProductPage = () => {
       </div>
       <div style={{ display: 'flex', justifyContent: 'right', marginTop: '20px', paddingRight: "10%" }}>
       <span style={{ marginRight: '10px' }}>
-          Sida {currentPage} av {totalPages}
+          Sida {currentPage}/{totalPages}
         </span>
         {currentPage > 1 && (
           <button onClick={() => paginate(currentPage - 1)} style={{ marginRight: '10px' }}>Föregående</button>
