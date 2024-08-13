@@ -1,6 +1,7 @@
 import React, {useState} from "react"
 import { Link } from "react-router-dom";
 import products from "../books"
+import { Button } from "react-bootstrap";
 
 
 const ProductPage = () => { 
@@ -41,10 +42,10 @@ const ProductPage = () => {
           Sida {currentPage}/{totalPages}
         </span>
         {currentPage > 1 && (
-          <button onClick={() => paginate(currentPage - 1)} style={{ marginRight: '10px' }}>Föregående</button>
+          <Button onClick={() => paginate(currentPage - 1)} style={{ marginRight: '10px' }}>Föregående</Button>
         )}
         {indexOfLastBook < products.length && (
-          <button onClick={() => paginate(currentPage + 1)}>Nästa</button>
+          <Button onClick={() => paginate(currentPage + 1)}>Nästa</Button>
         )}
       </div>
       </>
