@@ -12,6 +12,15 @@ const CartContainer = styled.div`
   box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
   padding: 20px;
   z-index: 1000;
+
+    @media (max-width: 768px) {
+        width: 100%;
+
+        img {
+        display: none;
+        }
+   
+  }
 `;
 
 const CartItem = styled.div`
@@ -37,6 +46,17 @@ const TotalAmount = styled.div`
   margin-top: 20px;
   font-weight: bold;
 `;
+
+const RemoveIteamButton = styled(Button)`
+  height: 35px;
+  width: 35px;
+  margin-top: 40px;
+
+  @media (max-width: 768px) {
+    margin-top: 0px;
+  }
+`;
+
 
 const Cart = () => {
   const { cart, dispatch } = useCart();
@@ -65,7 +85,7 @@ const Cart = () => {
               <img src={product.image} style={{width: "100px", height: "120px"}}/>
               {product.name} ({product.quantity} st) - {(parseFloat(product.cost) * product.quantity).toFixed(2)} kr
               </span>
-            <Button style={{height: "35px", width: "35px", marginTop: "40px"}} variant="danger" size="sm" onClick={() => removeFromCart(product)}>X</Button>
+            <RemoveIteamButton variant="danger" size="sm" onClick={() => removeFromCart(product)}>X</RemoveIteamButton>
           </CartItem>
         ))
       )}
