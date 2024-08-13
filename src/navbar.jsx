@@ -24,14 +24,16 @@ function Navbar() {
 
     const DropdownMenu = styled(Dropdown.Menu)`
     position: absolute;
-    margin-left: 0;
+   display: flex;
+   align-items: flex-end;
     padding: 0;
     width: 100%;
     max-height: 300px;
     overflow-y: auto;
     z-index: 1000;
+    margin-top: 0;
+    
     @media (min-width: 768px) {
-        width: 300px;
         margin-left: auto;
         margin-right: auto;
     }
