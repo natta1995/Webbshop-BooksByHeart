@@ -62,16 +62,16 @@ const Cart = () => {
         cart.map(product => (
           <CartItem key={product.id}>
             <span>
-              <img src={product.image} style={{width: "20%", height: "30%"}}/>
+              <img src={product.image} style={{width: "100px", height: "120px"}}/>
               {product.name} ({product.quantity} st) - {(parseFloat(product.cost) * product.quantity).toFixed(2)} kr
               </span>
-            <Button variant="danger" size="sm" onClick={() => removeFromCart(product)}>X</Button>
+            <Button style={{height: "35px", width: "35px", marginTop: "40px"}} variant="danger" size="sm" onClick={() => removeFromCart(product)}>X</Button>
           </CartItem>
         ))
       )}
       {cart.length > 0 && (
         <>
-          <TotalAmount>
+          <TotalAmount> 
             <span>Totalbelopp:</span>
             <span>{calculateTotal()} kr</span>
           </TotalAmount>
