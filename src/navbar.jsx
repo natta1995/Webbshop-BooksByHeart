@@ -1,7 +1,7 @@
 import {Link} from "react-router-dom"
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Form, Button, FormControl, InputGroup,  Navbar as BootstrapNavbar, Nav, Container, Dropdown } from "react-bootstrap";
-import React, { useState, useEffect, useRef } from "react";
+import { Form, Button, FormControl,  Navbar as BootstrapNavbar, Nav, Container, Dropdown } from "react-bootstrap";
+import React, { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom"
 import styled from "styled-components";
 import booksData from "./books"
