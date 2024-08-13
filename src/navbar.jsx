@@ -71,6 +71,19 @@ const FormWrapper = styled.div`
     }
 `;
 
+const StyledInputGroup = styled.div`
+  display: flex;
+  flex-direction: row;
+  padding-left: 100px;
+  width: 700px;
+
+  @media (max-width: 767px) {
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%; 
+  }
+`;
+
   
     const handleSearch = (e) => {
       e.preventDefault();
@@ -130,7 +143,7 @@ const FormWrapper = styled.div`
               </Nav>
             <FormWrapper>
               <Form className="d-flex" onSubmit={handleSearch} ref={searchRef}>
-                <InputGroup>
+                <StyledInputGroup>
                   <FormControl
                     placeholder="Sök efter en bok..."
                     value={searchTerm}
@@ -140,7 +153,7 @@ const FormWrapper = styled.div`
                   <Button variant="primary" type="submit">
                     Sök
                   </Button>
-                </InputGroup>
+                </StyledInputGroup>
                 {filteredBooks.length > 0 && (
                   <DropdownMenu show >
                     {filteredBooks.map((book) => (
