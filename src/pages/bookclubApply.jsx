@@ -29,7 +29,6 @@ const Label = styled.label`
   flex-direction: column;
   align-items: flex-start;
   margin-left: 5%;
-   
   width: 100%;
 `;
 
@@ -44,7 +43,7 @@ const BookClubSection = styled.div `
 
       @media (max-width: 768px) {
       display: flex;
-     align-items: flex-start
+     align-items: flex-start;
     
   }
 `
