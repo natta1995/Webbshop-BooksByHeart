@@ -23,7 +23,7 @@ function Navbar() {
 
 
     const DropdownMenu = styled(Dropdown.Menu)`
-      position: absolute;
+    position: absolute;
     margin-left: 0;
     padding: 0;
     width: 100%;
@@ -58,7 +58,18 @@ function Navbar() {
 }
 `;
 
+const FormWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+   
 
+    @media (min-width: 768px) {
+        flex-direction: row;
+        align-items: center;
+    }
+`;
 
   
     const handleSearch = (e) => {
@@ -117,13 +128,14 @@ function Navbar() {
                 <Nav.Link as={Link} to="/bookclub">Bokklubb</Nav.Link>
                 <Nav.Link as={Link} to="/bookclub/apply">Ansökan</Nav.Link>
               </Nav>
+            <FormWrapper>
               <Form className="d-flex" onSubmit={handleSearch} ref={searchRef}>
                 <InputGroup>
                   <FormControl
                     placeholder="Sök efter en bok..."
                     value={searchTerm}
                     onChange={handleInputChange}
-                    style={{width: "300px", color: "black", boxShadow: "none"}}
+                    style={{ color: "black", boxShadow: "none"}}
                   />
                   <Button variant="primary" type="submit">
                     Sök
@@ -146,13 +158,15 @@ function Navbar() {
                   
                 )}
               </Form>
-             
-            </BootstrapNavbar.Collapse>
-            <CartIcon onClick={() => setShowCart(!showCart)}>
+              <Nav className="ms-auto">
+              <CartIcon onClick={() => setShowCart(!showCart)}>
             <FontAwesomeIcon icon={faShoppingCart} />
             {cart.length > 0 && <span>{cart.length}</span>}
           </CartIcon>
-          </Container>
+          </Nav>
+          </FormWrapper>
+            </BootstrapNavbar.Collapse>
+            </Container>
           {showCart && <Cart />}
         </BootstrapNavbar>
       );
